@@ -182,7 +182,7 @@ var F = {
    w: [SIBO, Pathogene, Leaky]  (0–3)
 */
 var S = [
- {id:"blaeh",g:"v",n:"Blähbauch / Blähungen",k:["blaeh","aufgeblaeht","geblaeht","ballon","luft im bauch","trommel","meteorismus","winde","darmgase","pupsen","furz"],w:[3,1,1],
+ {id:"blaeh",g:"v",n:"Blähbauch / Blähungen",k:["blaeh","aufgeblaeht","geblaeht","wie ein ballon","ballonbauch","luft im bauch","wie eine trommel","trommelbauch","meteorismus","darmwinde","=winde","winde gehen","viele winde","darmgase","pupsen","furz"],x:["schwindel","trommelfell"],w:[3,1,1],
   y:{s:"Leitzeichen für SIBO: Bakterien vergären im Dünndarm Kohlenhydrate, die dort noch gar nicht abgebaut sein sollten — das Gas staut sich mitten im Bauch.",p:"Hefepilze und Parasiten bilden ebenfalls Gärgase.",l:"Dauernde Gärung reizt die Schleimhaut und lockert die Barriere."}},
  {id:"abends",g:"v",n:"Bauch morgens flach, abends dick",k:["abends dick","abends aufgeblaeht","blaehbauch abends","bauch abends","abends blaeh","abends bauch","am abend dick","morgens flach","im lauf des tages","wie schwanger","schwanger aus"],w:[3,0,0],
   y:{s:"Der Bauch wächst mit jeder Mahlzeit, weil die Gärung im Dünndarm über den Tag zunimmt; nachts erholt er sich — das typische SIBO-Muster."}},
@@ -194,7 +194,7 @@ var S = [
   y:{s:"Der Gasdruck aus dem Dünndarm drückt den Mageninhalt nach oben — Reflux hängt oft an SIBO statt an zu viel Säure.",p:"Helicobacter pylori kann mitspielen."},e:["hp"]},
  {id:"durchfall",g:"v",n:"Durchfall / weicher Stuhl",k:["durchfall","duenner stuhl","breiiger stuhl","breiig","weicher stuhl","wasserstuhl","diarrh"],w:[2,2,2],
   y:{s:"Wasserstoffbildende Bakterien im Dünndarm beschleunigen den Darm — die Durchfall-Form von SIBO.",p:"Lamblien, Parasiten und Candida zeigen sich oft als Durchfall.",l:"Eine entzündete Schleimhaut hält Wasser schlecht zurück."}},
- {id:"verstopfung",g:"v",n:"Verstopfung",k:["verstopf","obstipation","harter stuhl","stuhl hart","kaninchen","schafskot","muss pressen","stark pressen"],w:[2,1,1],
+ {id:"verstopfung",g:"v",n:"Verstopfung",x:["nase","ohr","nebenhoehl","bronch","ader","gefaess","poren"],k:["verstopf","obstipation","harter stuhl","stuhl hart","kaninchen","schafskot","muss pressen","stark pressen"],w:[2,1,1],
   y:{s:"Methanbildende Keime (IMO) bremsen den Darm — Verstopfung mit Blähbauch ist die Methan-Form von SIBO.",p:"Parasiten und Candida können den Darm träge machen.",l:"Stau im Darm hält Gärstoffe länger an der Schleimhaut."}},
  {id:"reizdarm",g:"v",n:"Reizdarm / Wechsel Durchfall–Verstopfung",k:["reizdarm","reizkolon","colon irritabile","wechselnd","abwechselnd","mal durchfall","mal verstopf","durchfall und verstopf","verstopfung und durchfall","im wechsel"],w:[3,1,2],
   y:{s:"Ein grosser Teil der Reizdärme ist in Wahrheit SIBO — der Wechsel zeigt mehrere Gasarten gleichzeitig.",p:"Versteckte Erreger (Lamblien, Blastocystis) laufen oft unter «Reizdarm».",l:"Reizdarm geht fast immer mit gereizter, durchlässiger Schleimhaut einher."}},
@@ -202,13 +202,13 @@ var S = [
   y:{s:"Gasdruck dehnt die Dünndarmschlingen.",p:"Erreger reizen die Darmwand.",l:"Eine entzündete Schleimhaut ist schmerzempfindlich."}},
  {id:"voll",g:"v",n:"Völlegefühl / schnell satt",k:["voellegefuehl","voll nach wenig","schnell satt","nach wenig satt","fruehe saettigung","voller bauch"],w:[2,0,0],
   y:{s:"Der gefüllte, gärende Dünndarm meldet «voll», obwohl kaum gegessen wurde."}},
- {id:"uebel",g:"v",n:"Übelkeit",k:["uebel","brechreiz","flau im magen"],w:[1,1,0],
+ {id:"uebel",g:"v",n:"Übelkeit",k:["=uebel","uebelkeit","morgenuebel","brechreiz","flau im magen"],w:[1,1,0],
   y:{s:"Gärung und Gasdruck im oberen Darm.",p:"Helicobacter und Parasiten machen oft Übelkeit, besonders nüchtern."}},
  {id:"fettstuhl",g:"v",n:"Fettstuhl / Stuhl schwimmt",k:["fettstuhl","stuhl schwimmt","schwimmt oben","heller stuhl","glaenzender stuhl","fettiger stuhl","stuhl klebt"],w:[3,1,1],
   y:{s:"Bakterien im Dünndarm zerlegen die Gallensäuren — Fett wird nicht mehr verdaut.",p:"Lamblien (Giardia) sind ein klassischer Auslöser von Fettstuhl.",l:"Die Aufnahmefläche der Schleimhaut ist gestört."},e:["para"]},
  {id:"unverdaut",g:"v",n:"Unverdautes im Stuhl",k:["unverdaut"],w:[2,0,1],
   y:{s:"Die Verdauung im Dünndarm ist gestört, Nahrung rauscht durch.",l:"Gereizte Darmzotten nehmen schlecht auf."}},
- {id:"geruch",g:"v",n:"Stark riechender Stuhl / Winde",k:["stinkend","stinkt","faulig","fauler geruch","riecht stark","faule eier","faulen eiern","schwefel"],w:[2,1,0],
+ {id:"geruch",g:"v",n:"Stark riechender Stuhl / Winde",k:["uebelriechend","stinkend","stinkt","faulig","fauler geruch","riecht stark","faule eier","faulen eiern","schwefel"],w:[2,1,0],
   y:{s:"Schwefelwasserstoff-Bildner im Dünndarm (Geruch nach faulen Eiern) — eine eigene SIBO-Form.",p:"Fäulniskeime und Parasiten."}},
  {id:"histamin",g:"v",n:"Histaminintoleranz",k:["histamin"],w:[2,0,3],
   y:{s:"Manche Bakterien im Dünndarm bilden selbst Histamin.",l:"Das Abbauenzym DAO wird in der Darmschleimhaut gebildet — ist sie gestört, fehlt es. Histaminintoleranz ist meist eine Schleimhautfrage."}},
@@ -228,7 +228,7 @@ var S = [
   y:{s:"Verwachsungen und fehlende Galle stören die Reinigung des Dünndarms.",l:"Ohne regelmässige Galle fehlt ein Schutz der Schleimhaut."}},
  {id:"postinfekt",g:"v",n:"Beginn nach Infekt / Lebensmittelvergiftung",k:["nach einem infekt","seit einem infekt","seit dem infekt","nach dem infekt","magen darm infekt","magendarm","lebensmittelvergiftung","salmonell","noro","brechdurchfall","seit der grippe","nach der grippe","reisedurchfall"],w:[3,2,1],
   y:{s:"Ein Magen-Darm-Infekt kann die Nerven der Putzwelle (MMC) schädigen — die häufigste Ursache von SIBO überhaupt.",p:"Erreger können nach dem akuten Infekt still weiterleben.",l:"Der Infekt hat die Schleimhaut angegriffen."}},
- {id:"heisshunger",g:"v",n:"Heisshunger auf Süsses",k:["heisshunger","lust auf suesses","suesshunger","zuckerhunger","zuckerverlangen","suessgelueste","schokolade","brauche zucker"],w:[1,3,0],
+ {id:"heisshunger",g:"v",n:"Zuckersucht / Heisshunger auf Süsses",k:["heisshunger","zuckersucht","sucht nach zucker","suechtig nach zucker","suchtig nach zucker","=zucker","suessigkeit","suesses","nasch","schoggi","suesshunger","lust auf suesses","suesshunger","zuckerhunger","zuckerverlangen","suessgelueste","schokolade","brauche zucker"],w:[1,3,0],
   y:{s:"Bakterien im Dünndarm leben von Zucker und verlangen Nachschub.",p:"Candida verlangt Zucker — Heisshunger auf Süsses ist eines ihrer deutlichsten Zeichen."},e:["cand"]},
  {id:"alkohol",g:"v",n:"Alkohol",k:["alkohol"],w:[1,1,2],
   y:{s:"Alkohol lähmt die Putzwelle.",p:"Candida bildet durch Gärung selbst Alkohol — «betrunken ohne zu trinken».",l:"Alkohol öffnet die Verbindungen der Schleimhaut direkt."}},
@@ -303,7 +303,7 @@ var S = [
  {id:"aphthen",g:"h",n:"Aphthen / Mundwinkelrisse",k:["aphth","aphten","mundwinkel","rhagaden"],w:[1,2,2],
   y:{s:"B-Vitamin- und Eisenmangel durch Fehlbesiedlung.",p:"Mundwinkelrisse sind oft Pilz (Candida), Aphthen oft viral.",l:"Die Mundschleimhaut spiegelt die Darmschleimhaut."},e:["cand"]},
 
- {id:"infekte",g:"i",n:"Häufige Infekte",k:["viele infekte","haeufige infekte","haeufig infekt","staendig infekt","immer wieder infekt","oft infekt","infekt nach infekt","immer krank","staendig krank","oft krank","dauernd krank","erkaeltet","infektanfaellig","lungenentz","abwehrschwach","immunschwach"],w:[0,2,2],
+ {id:"infekte",g:"i",n:"Häufige Infekte",k:["viele infekte","haeufige infekte","haeufig infekt","staendig infekt","immer wieder infekt","oft infekt","infekt nach infekt","immer krank","staendig krank","oft krank","dauernd krank","staendig erkaeltet","oft erkaeltet","immer erkaeltet","dauernd erkaeltet","infektanfaellig","lungenentz","abwehrschwach","immunschwach"],w:[0,2,2],
   y:{p:"Eine belastete Abwehr kommt nie zur Ruhe, wenn stille Erreger mitlaufen.",l:"Die Abwehr sitzt am Darm — ist die Barriere gestört, fehlt sie draussen."}},
  {id:"blase",g:"i",n:"Wiederkehrende Blasenentzündung",k:["blasenentzuend","harnwegsinfekt","blaseninfekt","zystitis","cystitis"],w:[1,3,1],
   y:{s:"Darmkeime (E. coli) wandern aus einem fehlbesiedelten Darm aus.",p:"Immer wiederkehrende Blasenentzündungen zeigen versteckte Keime in Biofilmen.",l:"Ein durchlässiger Darm erleichtert das Auswandern von Darmkeimen."}},
@@ -325,7 +325,7 @@ var S = [
   y:{p:"Die Lymphknoten sind die Wachposten der Abwehr — geschwollen zeigen sie, dass gekämpft wird."},e:["ebv"]},
  {id:"temp",g:"i",n:"Nachtschweiss / Frösteln",k:["nachtschweiss","schwitze nachts","schwitzen nachts","nachts schwitzen","subfebril","leicht erhoeht","erhoehte temperatur","froestel","schuettelfrost"],w:[0,3,0],
   y:{p:"Das Abwehrsystem arbeitet auf Sparflamme gegen einen Erreger — typisch für stille Infekte."}},
- {id:"gelenk",g:"b",n:"Gelenkschmerzen / Arthrose / Rheuma",k:["gelenk","arthrit","arthros","rheuma","knie","huefte","heberden","fingergelenk","polyarthr","gelenke tun weh"],w:[1,2,2],
+ {id:"gelenk",g:"b",n:"Gelenkschmerzen / Arthrose / Rheuma",x:["kiefergelenk"],k:["gelenk","arthrit","arthros","rheuma","knie","huefte","heberden","fingergelenk","polyarthr","gelenke tun weh"],w:[1,2,2],
   y:{s:"Bakterienbestandteile aus einem fehlbesiedelten Darm können Gelenke reizen.",p:"Borrelien, Chlamydien und andere Erreger setzen sich gern in Gelenke.",l:"Durchgetretene Stoffe lösen Immunreaktionen in den Gelenken aus."}},
  {id:"muskel",g:"b",n:"Muskelschmerzen / Fibromyalgie",k:["muskelschmerz","fibromyalg","gliederschmerz","alles tut weh","ganzkoerperschmerz"],w:[1,2,2],
   y:{s:"Gärstoffe übersäuern das Gewebe.",p:"Chronische Virus- und Bakterienlasten zeigen sich oft als Ganzkörperschmerz.",l:"Stille Entzündung aus dem Darm."}},
@@ -339,7 +339,7 @@ var S = [
   y:{s:"B12- und Magnesiummangel.",p:"Erreger mit Vorliebe für Nerven und Pilzgifte.",l:"Entzündung im Nervensystem über die Darm-Hirn-Achse."}},
  {id:"zahn",g:"i",n:"Wurzelbehandelte Zähne / Zahnherd",k:["wurzelbehandel","wurzelbehandl","toter zahn","tote zaehne","zahnherd","kieferentzuend","kieferostitis","nico","fistel","parodont","implantat","zahnfleischentzuend","zahnfleischbluten","zahnfleisch blutet","zahnfleischrueckgang"],w:[0,3,0],
   y:{p:"Tote, wurzelbehandelte Zähne und Kieferherde sind klassische Störfelder — Keime streuen von dort still in den ganzen Körper."},e:["zahn"]},
- {id:"sinus",g:"i",n:"Chronische Nebenhöhlen",k:["nebenhoehle","sinusitis","chronischer schnupfen","nase immer zu","dauerschnupfen"],w:[0,2,1],
+ {id:"sinus",g:"i",n:"Chronische Nebenhöhlen",k:["nebenhoehle","sinusitis","chronischer schnupfen","nase immer zu","nase verstopft","verstopfte nase","dauerschnupfen"],w:[0,2,1],
   y:{p:"Chronische Nebenhöhlen sind ein häufiges Versteck für Bakterien und Pilze in Biofilmen.",l:"Allergische Bereitschaft aus dem Darm hält die Schleimhäute geschwollen."}},
  {id:"schimmel",g:"i",n:"Schimmel in der Wohnung",k:["schimmel","feuchte wohnung","feuchte wand","feuchter keller","wasserschaden"],w:[0,3,1],
   y:{p:"Schimmelsporen und ihre Gifte (Mykotoxine) belasten dauerhaft — oft übersehen.",l:"Mykotoxine schädigen die Darmschleimhaut."},e:["schim"]},
@@ -400,7 +400,7 @@ var S = [
   y:{p:"Wiederkehrende Ohrenentzündungen zeigen versteckte Keime im Nasen-Rachen-Raum.",l:"Allergische Bereitschaft aus dem Darm hält die Ohrtrompete geschwollen."}},
 
  /* --- Allgemein --- */
- {id:"frieren",g:"a",n:"Frieren / kalte Hände und Füsse",k:["frieren","friere","kaelte","kalte haende","kalte fuesse","kaelteempfindlich","immer kalt","eiskalte"],w:[1,1,1],
+ {id:"frieren",g:"a",n:"Frieren / kalte Hände und Füsse",k:["frieren","friere","=kaelte","kaelteempfindlich","kalte haende","kalte fuesse","kaelteempfindlich","immer kalt","eiskalte"],w:[1,1,1],
   y:{s:"Eisenmangel und eine träge Schilddrüse bei Fehlbesiedlung senken die Wärme.",p:"Der Körper zieht Energie für die Abwehr ab.",l:"Nährstoffe für die Wärmebildung kommen nicht an."}},
  {id:"gewichtzu",g:"a",n:"Übergewicht / kann nicht abnehmen",k:["uebergewicht","nehme zu","zugenommen","gewichtszunahme","kann nicht abnehmen","abnehmen klappt nicht","bauchfett","nimmt zu"],w:[1,1,2],
   y:{s:"Bestimmte Darmbakterien ziehen mehr Kalorien aus der Nahrung; Methanbildner verlangsamen den Darm.",p:"Candida treibt den Zuckerhunger.",l:"Stille Entzündung blockiert die Fettverbrennung und macht insulinresistent."},e:["cand"]},
@@ -462,7 +462,7 @@ var S = [
   y:{s:"Nach Bauchoperationen bilden sich Verwachsungen, die den Dünndarm bremsen.",p:"Narben gelten als Störfelder, in denen sich Keime halten können.",l:"Narkose und Antibiotika rund um eine OP belasten die Schleimhaut."}},
  {id:"schnarchen",g:"o",n:"Schnarchen / Atemaussetzer",k:["schnarch","schlafapnoe","atemaussetzer"],w:[1,0,1],
   y:{s:"Nächtlicher Reflux und ein geblähter Bauch drücken aufs Zwerchfell.",l:"Unverträglichkeiten lassen die Schleimhäute im Rachen anschwellen."}},
- {id:"epilepsie",g:"n",n:"Epilepsie / Krampfanfälle",k:["epilep","krampfanfall","krampfanfaell","anfaelle"],w:[1,1,2],
+ {id:"epilepsie",g:"n",n:"Epilepsie / Krampfanfälle",k:["epilep","krampfanfall","krampfanfaell","=anfaelle"],w:[1,1,2],
   y:{s:"Nährstoffmangel (B6, Magnesium) senkt die Krampfschwelle.",p:"Erreger mit Vorliebe für Nerven und Pilzgifte.",l:"Darm-Hirn-Achse: Entzündungsstoffe aus dem Darm reizen das Gehirn."}},
  {id:"chemo",g:"o",n:"Krebs / Chemotherapie / Bestrahlung",k:["chemo","bestrahlung","krebs","tumor","radiotherapie"],w:[2,1,3],
   y:{s:"Chemotherapie und Bestrahlung lähmen die Putzwelle und zerstören die Flora — SIBO ist danach sehr häufig.",p:"Die geschwächte Abwehr lässt Candida und Viren aufblühen.",l:"Chemotherapie greift gezielt sich schnell teilende Zellen an — die Darmschleimhaut erneuert sich alle paar Tage und wird stark geschädigt."},e:["cand"]}
@@ -480,9 +480,11 @@ function norm(t){
 /* Schlüssel einmal vorbereiten */
 S.forEach(function(m){
   m.kk = m.k.map(function(k){
-    var n = norm(k).trim();
-    return {sp:n, cp:n.replace(/ /g,"")};
+    var ganz = k.charAt(0) === "=";
+    var n = norm(ganz ? k.slice(1) : k).trim();
+    return {sp:n, cp:n.replace(/ /g,""), ganz:ganz};
   });
+  m.xx = (m.x || []).map(function(x){ return norm(x).trim().replace(/ /g,""); });
 });
 
 function klauseln(text){
@@ -497,9 +499,10 @@ function klauseln(text){
 function trifft(m, kl){
   for (var i=0;i<kl.length;i++){
     var sp = kl[i].n, cp = sp.replace(/ /g,"");
+    if (m.xx.some(function(x){ return cp.indexOf(x) >= 0; })) continue;
     for (var j=0;j<m.kk.length;j++){
       var k = m.kk[j];
-      if (k.cp.length <= 4){ if (sp.indexOf(" " + k.sp + " ") >= 0) return true; }
+      if (k.ganz || k.cp.length <= 4){ if (sp.indexOf(" " + k.sp + " ") >= 0) return true; }
       else if (cp.indexOf(k.cp) >= 0) return true;
     }
   }

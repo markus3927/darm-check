@@ -68,7 +68,9 @@ button{font:inherit;cursor:pointer;border:none;border-radius:10px;padding:11px 1
 .card .kopf{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .card h3{margin:0;font-size:1.15rem;color:var(--c)}
 .pct{font-size:1.35rem;font-weight:700;color:var(--c);white-space:nowrap}
-.sumrow{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.hs{margin-top:12px;font-size:.78rem;font-weight:700;color:var(--grau);text-transform:uppercase;letter-spacing:.5px}
+.summary .hinweis{margin-top:10px;font-size:.84rem;color:#5c4100;background:#FFF6E0;border-left:4px solid #E8A317;border-radius:8px;padding:9px 12px}
+.sumrow{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
 .sumrow span{flex:1;min-width:90px;background:#f4f7fa;border-radius:10px;padding:8px 10px;text-align:center;font-size:.8rem;color:var(--grau)}
 .sumrow b{display:block;font-size:1.25rem;color:var(--c)}
 .hinw{background:#f7fafd;border-left:4px solid var(--c);border-radius:8px;padding:9px 12px;margin-top:10px;font-size:.9rem}
@@ -565,9 +567,9 @@ function zeigeErgebnis(sc, wi, erreger, anzahl, hits){
     sum = "Hauptspur: <b>" + esc(F[aktiv[0]].name) + "</b>" +
           (aktiv.length > 1 ? ", dazu " + esc(aktiv.slice(1).map(function(f){ return F[f].name; }).join(" und ")) : "") + ".";
   }
-  var html = '<section class="box summary"><h2>Einschätzung</h2><p>' + sum + '</p><div class="sumrow">' +
+  var html = '<section class="box summary"><h2>Einschätzung</h2><p>' + sum + '</p><div class="hs">Hinweisstärke</div><div class="sumrow">' +
     order.map(function(f){ return '<span style="--c:' + F[f].farbe + '"><b>' + prozent(sc[f]) + ' %</b>' + esc(F[f].name) + '</span>'; }).join("") +
-    '</div><button class="mehr" id="erklBtn">Was steckt dahinter?</button><div class="info" id="erkl">' + ERKLAERUNG + '</div></section>';
+    '</div><p class="hinweis">Die Zahlen zeigen, wie stark deine Angaben in diese Richtung deuten. Das ist keine Diagnose und kein Ersatz für eine ärztliche Abklärung.</p><button class="mehr" id="erklBtn">Was steckt dahinter?</button><div class="info" id="erkl">' + ERKLAERUNG + '</div></section>';
 
   /* Karten — nur wo es einen Hinweis gibt */
   sicht.forEach(function(f){

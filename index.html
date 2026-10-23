@@ -42,29 +42,29 @@ button{font:inherit;cursor:pointer;border:none;border-radius:10px;padding:11px 1
 .b-main:active{background:var(--dunkel)}
 .b-sec{background:var(--hellblau);color:var(--dunkel)}
 .hint{font-size:.83rem;color:var(--grau);margin-top:8px}
-details.zeichen{margin-top:12px;border-top:1px solid var(--linie);padding-top:10px}
-details.zeichen>summary{cursor:pointer;font-weight:600;color:var(--royal);list-style:none}
-details.zeichen>summary::-webkit-details-marker{display:none}
-details.zeichen>summary::before{content:"▸ ";}
-details.zeichen[open]>summary::before{content:"▾ ";}
-.grp{margin-top:10px}
-.grp h4{margin:0 0 6px;font-size:.85rem;color:var(--grau);text-transform:uppercase;letter-spacing:.5px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{border:1.5px solid var(--linie);background:#fff;color:var(--text);border-radius:20px;padding:6px 11px;font-size:.85rem;font-weight:500}
-.chip.on{background:var(--royal);border-color:var(--royal);color:#fff}
 .erkannt{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
 .tag{background:var(--hellblau);color:var(--dunkel);border-radius:6px;padding:3px 8px;font-size:.8rem;font-weight:600}
 .leer{color:var(--grau);font-size:.9rem}
+.offen{width:100%;margin-top:8px;font-size:.85rem;color:var(--grau);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tag-off{background:#FFF4E0;color:#A86400}
 .summary{border-left:5px solid var(--royal)}
 .summary h2{margin:0 0 6px;font-size:1.1rem;color:var(--dunkel)}
 .summary p{margin:0}
 .card{border-top:5px solid var(--c);padding-top:14px}
 .card .kopf{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .card h3{margin:0;font-size:1.15rem;color:var(--c)}
-.stufe{font-size:.82rem;font-weight:700;border-radius:20px;padding:3px 10px;white-space:nowrap;background:#eef2f6;color:var(--grau)}
-.stufe.s1{background:#FFF4E0;color:#A86400}
-.stufe.s2{background:#FFE7D6;color:#B4470E}
-.stufe.s3{background:#FDE0E0;color:var(--kill)}
+.pct{font-size:1.35rem;font-weight:700;color:var(--c);white-space:nowrap}
+.sumrow{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.sumrow span{flex:1;min-width:90px;background:#f4f7fa;border-radius:10px;padding:8px 10px;text-align:center;font-size:.8rem;color:var(--grau)}
+.sumrow b{display:block;font-size:1.25rem;color:var(--c)}
+.hinw{background:#f7fafd;border-left:4px solid var(--c);border-radius:8px;padding:9px 12px;margin-top:10px;font-size:.9rem}
+.hinw p{margin:0 0 6px}.hinw p:last-child{margin:0}
+.erkl{font-size:.93rem;color:var(--text)}
+.info .erkl p{color:var(--text)}
+.erkl h4{margin:14px 0 4px;color:var(--dunkel);font-size:.98rem}
+.erkl h4:first-child{margin-top:4px}
+.erkl p{margin:0}
+.erkl .kreis{background:var(--hellblau);border-radius:10px;padding:10px 12px;margin-top:12px;color:var(--dunkel);font-weight:600;text-align:center;line-height:1.6}
 .bar{height:9px;background:#eef2f6;border-radius:6px;margin:10px 0 4px;overflow:hidden}
 .bar span{display:block;height:100%;background:var(--c);border-radius:6px;transition:width .4s}
 .kurz{font-size:.9rem;color:var(--grau);margin:6px 0 10px}
@@ -74,30 +74,17 @@ details.zeichen[open]>summary::before{content:"▾ ";}
 .wi b{display:block;font-size:.95rem}
 .wi .pkt{color:var(--c);letter-spacing:1px;font-size:.8rem;margin-left:4px}
 .wi span.tx{display:block;font-size:.88rem;color:#4a5560;margin-top:2px}
-.pl{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #f0f3f6;font-size:.92rem}
-.pl:last-child{border-bottom:none}
-.nr{font-family:Consolas,Menlo,monospace;font-weight:700;color:var(--dunkel);white-space:nowrap}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--braun);margin-left:3px;vertical-align:middle}
-.pn{flex:1}
-.pn small{display:block;color:var(--grau);font-size:.8rem}
-.ps{font-size:.75rem;font-weight:700;color:#fff;border-radius:6px;padding:3px 7px;white-space:nowrap}
-.ps.k{background:var(--kill)}
-.ps.h{background:var(--heal)}
 .mehr{margin-top:12px;background:var(--hellblau);color:var(--dunkel);width:100%}
 .info{display:none;margin-top:10px;background:#f7fafd;border-radius:10px;padding:12px 14px;font-size:.9rem}
 .info.offen{display:block}
+.pers{background:#fff;border-left:4px solid var(--c);border-radius:8px;padding:10px 12px;margin-bottom:12px}
+.ikopf{font-weight:700;color:var(--c);font-size:.8rem;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px}
+.allg .ikopf{color:var(--grau)}
+.info .pers p{margin:0 0 9px;color:var(--text)}
+.info .pers p:last-child{margin-bottom:0}
 .info h6{margin:10px 0 3px;font-size:.85rem;color:var(--dunkel)}
 .info h6:first-child{margin-top:0}
 .info p{margin:0}
-.ablauf h2{margin:0 0 4px;font-size:1.1rem;color:var(--dunkel)}
-.ablauf ol{margin:10px 0 0;padding:0;list-style:none;counter-reset:s}
-.ablauf li{counter-increment:s;display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #f0f3f6}
-.ablauf li:last-child{border-bottom:none}
-.ablauf li::before{content:counter(s);flex:none;width:24px;height:24px;border-radius:50%;background:var(--royal);color:#fff;font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px}
-.ablauf .zeile{flex:1;font-size:.92rem}
-.ablauf .zeile small{display:block;color:var(--grau);font-size:.8rem}
-.copy{margin-top:12px;width:100%;background:var(--royal);color:#fff}
-.copy.ok{background:#2E7D32}
 footer{max-width:760px;margin:10px auto 0;padding:18px 16px 28px;text-align:center;font-size:.8rem;color:var(--grau)}
 footer .l1{color:var(--dunkel);font-weight:600}
 footer .l3{margin-top:8px;font-size:.75rem}
@@ -122,10 +109,6 @@ footer .l3{margin-top:8px;font-size:.75rem}
       <button class="b-sec" id="neu">Neu</button>
     </div>
     <div class="hint">Mehrere Beschwerden mit Komma trennen. Die Auswertung läuft beim Tippen mit.</div>
-    <details class="zeichen" id="zeichen">
-      <summary>Weitere Zeichen antippen</summary>
-      <div id="chipbox"></div>
-    </details>
   </section>
 
   <section class="box" id="erkanntBox" style="display:none">
@@ -155,12 +138,7 @@ var F = {
       ["Drei Formen","Wasserstoff → eher Durchfall · Methan (IMO) → eher Verstopfung · Schwefelwasserstoff → Durchfall mit Geruch nach faulen Eiern."],
       ["Häufige Auslöser","Magen-Darm-Infekt (Putzwelle geschädigt) · Säureblocker · Dauerstress · Bauch-OP, Verwachsungen · Schilddrüsen-Unterfunktion, Diabetes · Antibiotika."],
       ["Typische Folgen","B12- und Eisenmangel · Rosazea · unruhige Beine · Brain-Fog · Leaky Gut."],
-      ["Rückfälle","SIBO kommt gern wieder, wenn die Putzwelle (MMC) nicht arbeitet. Esspausen von rund 4 Stunden geben ihr Raum; pr2259 unterstützt sie."]
-     ],
-     prog:[
-      {r:"0705", n:"SIBO-Klärung", p:"Killing (R) - JW", d:1, w:"Klärung der Fehlbesiedlung"},
-      {r:"0704", n:"SIBO / Dünndarm", p:"Healing (R) - JW", d:1, w:"Dünndarm beruhigen und aufbauen"},
-      {r:"2259", n:"Putzwelle / MMC", p:"Healing (R) - JW", d:1, w:"bei Rückfall und Blähbauch abends"}
+      ["Rückfälle","SIBO kommt gern wieder, wenn die Putzwelle (MMC) nicht arbeitet. Esspausen von rund 4 Stunden geben ihr Raum."]
      ]},
   p:{key:"p", name:"Versteckte Pathogene", farbe:"var(--path)",
      kurz:"Erreger, die nach einem Infekt still im Körper weiterleben und die Abwehr dauernd beschäftigen.",
@@ -170,9 +148,6 @@ var F = {
       ["Leitzeichen","Erschöpfung ohne erkennbaren Grund · wandernde Schmerzen · Lymphknoten · Nachtschweiss, Frösteln · schubweiser Verlauf · Beginn nach Infekt, Zeckenstich oder Reise."],
       ["Warum versteckt","Biofilme schützen die Erreger. Das Labor zeigt oft nichts, weil sie nicht im Blut kreisen."],
       ["Zusammenhang Darm","Erreger reizen die Schleimhaut und machen den Weg für Leaky Gut frei. Candida wächst gern zusammen mit SIBO."]
-     ],
-     prog:[
-      {r:"0245", n:"Basis-Einstieg Pathogene", p:"Killing (Dual) (R) - JW", w:"breites Killing über mehrere Erregerklassen"}
      ]},
   l:{key:"l", name:"Leaky Gut", farbe:"var(--leaky)",
      kurz:"Durchlässige Darmbarriere: Unverdautes, Bakterienteile und Gifte gelangen ins Blut.",
@@ -182,30 +157,9 @@ var F = {
       ["Häufige Auslöser","SIBO · Erreger · Dauerstress · Schmerzmittel (NSAR) · Alkohol · Gluten (Zonulin) · Antibiotika."],
       ["Folgen","Das Abwehrsystem ist dauernd gereizt — Grundlage für Allergien und Autoimmunthemen."],
       ["Reihenfolge","Erst die Ursachen klären (Pathogene, SIBO), dann die Schleimhaut aufbauen — sonst reisst sie wieder auf."]
-     ],
-     prog:[
-      {r:"0738", n:"Leaky Gut / Darmbarriere", p:"Healing (R) - JW", d:1, w:"Schleimhaut und Barriere aufbauen"}
      ]}
 };
 
-/* ---------- Spezifische Erreger ---------- */
-var E = {
-  bor:{n:"Borrelien", r:"0046", pn:"Borreliose / Lyme", p:"Killing (R) - JW"},
-  ebv:{n:"Epstein-Barr-Virus", r:"0051", pn:"Epstein-Barr / Pfeiffer", p:"Killing (R) - JW"},
-  herp:{n:"Herpes simplex", r:"0017", pn:"Lippenherpes / Herpes simplex", p:"Killing (R) - JW"},
-  zost:{n:"Zoster-Virus", r:"0022", pn:"Gürtelrose / Herpes Zoster", p:"Killing (R) - JW"},
-  hp:{n:"Helicobacter", r:"0034", pn:"Gastritis / H. pylori", p:"Killing (R) - JW"},
-  zahn:{n:"Zahnherd", r:"0128", pn:"Zahnschmerz / Zahnherd", p:"Killing (R) - JW"},
-  schim:{n:"Schimmel", r:"0148", pn:"Schimmelpilz / Aspergillus", p:"Killing (R) - JW"},
-  para:{n:"Parasiten", r:"0100", pn:"Darm-Parasiten / Würmer", p:"Killing (R) - JW", d:1},
-  cand:{n:"Candida", r:"0099", pn:"Candida / Pilzbelastung", p:"Killing (R) - JW"}
-};
-var E_REIHE = ["bor","ebv","herp","zost","hp","zahn","schim","para"]; /* Candida separat nach SIBO-Klärung */
-
-var P_FIX = {
-  detox:{r:"0107", n:"Detox killerfrei", p:"Healing (R) - JW", w:"direkt nach dem letzten Killing"},
-  zell:{r:"0247", n:"Zell-Regeneration", p:"Healing (R) - JW", w:"zum Schluss"}
-};
 
 /* ---------- Merkmale ----------
    g: v Verdauung · a Allgemein & Kopf · h Haut & Allergie · i Infekt & Erreger
@@ -242,7 +196,7 @@ var S = [
   y:{s:"Schwefelwasserstoff-Bildner im Dünndarm (Geruch nach faulen Eiern) — eine eigene SIBO-Form.",p:"Fäulniskeime und Parasiten."}},
  {id:"histamin",g:"v",n:"Histaminintoleranz",k:["histamin"],w:[2,0,3],
   y:{s:"Manche Bakterien im Dünndarm bilden selbst Histamin.",l:"Das Abbauenzym DAO wird in der Darmschleimhaut gebildet — ist sie gestört, fehlt es. Histaminintoleranz ist meist eine Schleimhautfrage."}},
- {id:"laktfruk",g:"v",n:"Laktose- / Fruktoseintoleranz",k:["laktose","lactose","fruktose","fructose","milchzucker","fruchtzucker","sorbit","fodmap"],w:[3,0,2],
+ {id:"laktfruk",g:"v",n:"Laktose- / Fruktoseintoleranz",k:["laktose","lactose","fruktose","fructose","milchzucker","milchprodukte","vertrage keine milch","fruchtzucker","sorbit","fodmap"],w:[3,0,2],
   y:{s:"Was nicht vertragen wird, landet bei den Bakterien im Dünndarm und gärt — erworbene Laktose- und Fruktoseprobleme sind oft SIBO.",l:"Die Verdauungsenzyme sitzen in der Schleimhaut; ist sie angegriffen, fehlen sie."}},
  {id:"unvertr",g:"v",n:"Viele Unverträglichkeiten",k:["unvertraeglich","vertrage","vertraegt","intoleranz","reagiere auf","reagiert auf alles","immer mehr lebensmittel","immer weniger","fast nichts mehr"],w:[1,0,3],
   y:{s:"Gärung im Dünndarm macht viele Speisen unverträglich.",l:"Kernzeichen von Leaky Gut: Wer auf immer mehr Lebensmittel reagiert, hat meist eine durchlässige Barriere — unverdaute Eiweisse gelangen ins Blut, und das Abwehrsystem bildet Reaktionen."}},
@@ -274,48 +228,48 @@ var S = [
   y:{s:"Bakterien essen mit, die Aufnahme im Dünndarm ist gestört.",p:"Parasiten und chronische Erreger zehren.",l:"Die Aufnahmefläche der Schleimhaut ist gestört."},e:["para"]},
  {id:"magen",g:"v",n:"Magenschmerzen / Gastritis",k:["gastritis","magenschmerz","magenweh","magenbrennen","helicobacter","pylori","magen brennt","magendruck","magendrueck"],w:[1,2,1],
   y:{s:"Ein gestörter Magen lässt mehr Keime in den Dünndarm.",p:"Helicobacter pylori ist ein häufiger stiller Bewohner des Magens.",l:"Entzündung im oberen Verdauungstrakt."},e:["hp"]},
- {id:"galle",g:"v",n:"Leber / Galle belastet",k:["galle","fettleber","leberwerte","leber belastet","druck rechts","vertrage kein fett","vertrage fett nicht","fett nicht vertragen"],w:[1,1,1],
+ {id:"galle",g:"v",n:"Leber / Galle belastet",k:["galle","fettleber","leberwerte","leber belastet","leber","gelbsucht","meulengracht","gilbert","druck rechts","vertrage kein fett","vertrage fett nicht","fett nicht vertragen"],w:[1,1,1],
   y:{s:"Zu wenig Galle schwächt die Keimabwehr im Dünndarm.",p:"Erreger und ihre Gifte belasten die Leber.",l:"Was durch die Barriere tritt, muss die Leber abfangen."}},
- {id:"crohn",g:"v",n:"Morbus Crohn / Colitis",k:["crohn","colitis","kolitis","divertikulitis","darmentzuend"],w:[2,1,3],
+ {id:"crohn",g:"v",n:"Morbus Crohn / Colitis",k:["crohn","colitis","kolitis","divertikel","divertikulitis","darmentzuend"],w:[2,1,3],
   y:{s:"Entzündete Darmabschnitte werden oft fehlbesiedelt.",p:"Erreger gelten als Auslöser von Schüben.",l:"Bei chronischer Darmentzündung ist die Barriere immer mitbetroffen."}},
 
  {id:"b12",g:"a",n:"Vitamin-B12-Mangel",k:["b12","b 12","vitamin b12","cobalamin"],w:[3,0,1],
   y:{s:"Bakterien im Dünndarm verbrauchen das B12, bevor es aufgenommen wird — ein klassisches SIBO-Zeichen.",l:"Gestörte Aufnahme an der Schleimhaut."}},
- {id:"eisen",g:"a",n:"Eisenmangel / Blutarmut",k:["eisenmangel","ferritin","eisen tief","eisenwert","anaemie","blutarmut","eiseninfusion"],w:[2,1,2],
+ {id:"eisen",g:"a",n:"Eisenmangel / Blutarmut",k:["eisenmangel","ferritin","eisen tief","eisenwert","anaemie","blutarmut","eiseninfusion","blass"],w:[2,1,2],
   y:{s:"Fehlbesiedlung stört die Eisenaufnahme im oberen Dünndarm.",p:"Erreger (z. B. Helicobacter, Würmer) verbrauchen Eisen.",l:"Stille Entzündung blockiert die Eisenaufnahme."}},
  {id:"mangel",g:"a",n:"Vitamin- / Mineralstoffmangel",k:["vitaminmangel","mineralstoffmangel","naehrstoffmangel","magnesiummangel","zinkmangel","vitamin d mangel","vitamin d tief","folsaeure"],w:[2,0,2],
   y:{s:"Fehlbesiedlung und Gärung stören die Aufnahme.",l:"Was die Schleimhaut nicht aufnimmt, geht verloren — trotz guter Ernährung."}},
- {id:"muede",g:"a",n:"Müdigkeit / Erschöpfung",k:["muede","muedigkeit","erschoepf","fatigue","kraftlos","energielos","keine energie","schlapp","ausgelaugt","cfs","burnout"],w:[1,2,2],
+ {id:"muede",g:"a",n:"Müdigkeit / Erschöpfung",k:["muede","muedigkeit","erschoepf","antriebslos","nicht aus dem bett","leistungsknick","fatigue","kraftlos","energielos","keine energie","schlapp","ausgelaugt","cfs","burnout"],w:[1,2,2],
   y:{s:"Gärgifte und Nährstoffmangel rauben Energie.",p:"Stille Erreger (EBV, Borrelien, Candida) halten die Abwehr dauernd beschäftigt — Erschöpfung ohne erkennbaren Grund ist ihr Hauptzeichen.",l:"Was durch die Barriere tritt, hält eine stille Entzündung am Laufen, die müde macht."}},
  {id:"essensmuede",g:"a",n:"Müde nach dem Essen",k:["muede nach dem essen","nach dem essen muede","schlaefrig nach dem essen","nach dem essen schlaefrig","mittagstief","essen macht muede","koma nach dem essen"],w:[2,0,2],
   y:{s:"Gärung direkt nach der Mahlzeit, Gärstoffe gehen ins Blut.",l:"Durchgetretene Stoffe lösen nach jeder Mahlzeit eine kleine Abwehrreaktion aus."}},
- {id:"brainfog",g:"a",n:"Brain-Fog / Konzentration",k:["brain fog","brainfog","nebel im kopf","hirnnebel","vernebelt","watte","konzentration","unkonzentriert","vergesslich","wortfindung"],w:[2,2,2],
+ {id:"brainfog",g:"n",n:"Brain-Fog / Konzentration",k:["brain fog","brainfog","nebel im kopf","hirnnebel","vernebelt","watte","konzentration","unkonzentriert","vergesslich","wortfindung"],w:[2,2,2],
   y:{s:"Gärprodukte aus dem Dünndarm (D-Laktat) benebeln den Kopf, oft nach Kohlenhydraten.",p:"Erreger mit Vorliebe für Nerven (EBV, Borrelien) und Pilzgifte wirken aufs Gehirn.",l:"Darm-Hirn-Achse: Entzündungsbotenstoffe aus dem Darm erreichen das Gehirn."}},
- {id:"kopf",g:"a",n:"Kopfschmerzen / Migräne",k:["kopfschmerz","kopfweh","migraene","kopf brummt","druck im kopf"],w:[1,1,2],
+ {id:"kopf",g:"n",n:"Kopfschmerzen / Migräne",k:["kopfschmerz","kopfweh","kopfdruck","migraene","kopf brummt","druck im kopf"],w:[1,1,2],
   y:{s:"Gärstoffe und Histamin aus dem Darm.",p:"Zahnherde, Nebenhöhlen und Viren können Kopfschmerz unterhalten.",l:"Durchtretendes Histamin und Entzündungsstoffe lösen Migräne aus."}},
  {id:"schlaf",g:"a",n:"Schlafstörungen",k:["schlafstoer","schlaflos","einschlaf","durchschlaf","schlecht schlafen","schlafe schlecht","wache nachts","aufwachen","nachts wach","schlafprobl"],w:[1,2,1],
   y:{s:"Ein unruhiger Darm stört die Nachtruhe.",p:"Parasiten sind nachts aktiv; Aufwachen zwischen 1 und 3 Uhr zeigt die belastete Leber.",l:"Der Darm bildet einen grossen Teil der Vorstufen von Serotonin und Melatonin."}},
- {id:"psyche",g:"a",n:"Stimmung / Angst / Reizbarkeit",k:["depress","niedergeschlagen","angst","panik","reizbar","gereizt","stimmungsschwank","unruhe","nervoes","traurig"],w:[1,1,2],
+ {id:"psyche",g:"a",n:"Stimmung / Angst / Reizbarkeit",k:["depress","niedergeschlagen","angst","panik","nervositaet","reizbar","gereizt","stimmungsschwank","unruhe","nervoes","traurig"],w:[1,1,2],
   y:{s:"Gärgifte belasten das Nervensystem.",p:"Chronische Erreger und Pilzgifte drücken auf die Stimmung.",l:"Darm-Hirn-Achse: Ein entzündeter Darm schickt Entzündungsbotenstoffe ins Gehirn und bildet weniger Serotonin."}},
  {id:"stress",g:"a",n:"Dauerstress",k:["stress","ueberlastet","ueberfordert"],w:[1,0,2],
   y:{s:"Stress bremst die Putzwelle (MMC), die den Dünndarm zwischen den Mahlzeiten reinigt.",l:"Stresshormone lockern die Verbindungen der Darmschleimhaut."}},
- {id:"rls",g:"a",n:"Unruhige Beine (RLS)",k:["rls","restless","unruhige beine","beine zappeln"],w:[3,0,1],
+ {id:"rls",g:"n",n:"Unruhige Beine (RLS)",k:["rls","restless","unruhige beine","beine zappeln"],w:[3,0,1],
   y:{s:"RLS tritt bei SIBO auffallend häufig auf — oft über den gestörten Eisenhaushalt im Gehirn.",l:"Stille Entzündung aus dem Darm reizt die Nerven."}},
- {id:"herz",g:"a",n:"Herzstolpern / Herzrasen",k:["herzstolpern","herzrasen","roemheld","herzklopfen","extrasystol"],w:[2,1,0],
+ {id:"herz",g:"o",n:"Herzstolpern / Herzrasen",k:["herzstolpern","herzrasen","roemheld","brustenge","enge in der brust","druck auf der brust","herzklopfen","extrasystol"],w:[2,1,0],
   y:{s:"Gasdruck im Oberbauch drückt aufs Zwerchfell und reizt das Herz (Roemheld).",p:"Borrelien und Viren können den Herzrhythmus stören."}},
- {id:"schilddr",g:"a",n:"Schilddrüse / Hashimoto",k:["schilddrues","hashimoto","unterfunktion","hypothyreose","thyroxin","euthyrox"],w:[1,2,2],
+ {id:"schilddr",g:"o",n:"Schilddrüse / Hashimoto",k:["schilddrues","hashimoto","unterfunktion","hypothyreose","thyroxin","euthyrox"],w:[1,2,2],
   y:{s:"Eine Unterfunktion macht den Darm träge — das begünstigt SIBO.",p:"EBV gilt als möglicher Auslöser von Hashimoto.",l:"Autoimmunthemen der Schilddrüse hängen eng mit der Darmbarriere zusammen."},e:["ebv"]},
  {id:"autoimmun",g:"a",n:"Autoimmunerkrankung",k:["autoimmun","lupus","multiple sklerose","ms","rheumatoide","bechterew","sjoegren","vitiligo"],w:[1,2,3],
   y:{s:"Eine begleitende Fehlbesiedlung ist häufig.",p:"Versteckte Erreger (EBV u. a.) gelten als Zündfunken für Autoimmunprozesse.",l:"Ohne durchlässige Darmbarriere entsteht kaum eine Autoimmunerkrankung — sie ist der Dreh- und Angelpunkt."},e:["ebv"]},
- {id:"diabetes",g:"a",n:"Diabetes",k:["diabetes","blutzucker","zuckerkrank"],w:[2,2,1],
+ {id:"diabetes",g:"o",n:"Diabetes",k:["diabetes","blutzucker","zuckerkrank"],w:[2,2,1],
   y:{s:"Diabetes lähmt die Darmnerven der Putzwelle — SIBO ist dabei häufig.",p:"Hoher Zucker füttert Candida.",l:"Hoher Blutzucker schwächt die Barriere."},e:["cand"]},
- {id:"pille",g:"a",n:"Pille / Cortison / Hormone",k:["pille","cortison","kortison","prednison","hormontherapie"],w:[1,2,1],
+ {id:"pille",g:"o",n:"Pille / Cortison / Hormone",k:["pille","cortison","kortison","prednison","hormontherapie"],w:[1,2,1],
   y:{s:"Hormone verändern die Darmbewegung.",p:"Pille und Cortison begünstigen Candida.",l:"Cortison schwächt die Schleimhaut."},e:["cand"]},
  {id:"schmerzmittel",g:"a",n:"Schmerzmittel regelmässig",k:["schmerzmittel","ibuprofen","irfen","algifor","voltaren","diclofenac","aspirin","naproxen","ponstan","nsar"],w:[1,0,3],
   y:{s:"Schmerzmittel schädigen die Dünndarmschleimhaut.",l:"Entzündungshemmer (NSAR) öffnen die Darmbarriere schon nach wenigen Tagen."}},
 
  {id:"rosazea",g:"h",n:"Rosazea / rote Wangen",k:["rosazea","rosacea","kupferrose","couperose","rote wangen","gesicht rot"],w:[3,1,1],
-  y:{s:"Rosazea hängt auffallend oft an SIBO — wird der Dünndarm geklärt, bessert sie sich häufig deutlich.",p:"Demodex-Milben und Helicobacter werden bei Rosazea gefunden.",l:"Entzündungsstoffe aus dem Darm zeigen sich im Gesicht."},e:["hp"]},
+  y:{s:"Rosazea hängt auffallend oft an SIBO — Haut und Dünndarm stehen hier in engem Zusammenhang.",p:"Demodex-Milben und Helicobacter werden bei Rosazea gefunden.",l:"Entzündungsstoffe aus dem Darm zeigen sich im Gesicht."},e:["hp"]},
  {id:"ekzem",g:"h",n:"Ekzem / Neurodermitis",k:["ekzem","neurodermit","atopisch","dermatitis"],w:[1,1,3],
   y:{s:"Gärung und Histamin aus dem Darm.",p:"Candida und Staphylokokken unterhalten Ekzeme.",l:"Die Haut spiegelt den Darm: Was durch die Barriere tritt, wird über die Haut ausgetragen."},e:["cand"]},
  {id:"akne",g:"h",n:"Akne / unreine Haut",k:["akne","pickel","unreine haut","mitesser","pusteln"],w:[2,1,2],
@@ -328,12 +282,12 @@ var S = [
   y:{s:"Eisen, Zink und B12 werden nicht aufgenommen.",p:"Chronische Belastungen ziehen Kraft aus den Haarwurzeln.",l:"Gestörte Aufnahme und stille Entzündung."}},
  {id:"allergie",g:"h",n:"Allergien / Heuschnupfen",k:["allergi","heuschnupfen","pollen","hausstaub","tierhaar"],w:[1,0,3],
   y:{s:"Eine bakterielle Belastung hält das Abwehrsystem gereizt.",l:"Rund 70–80 % des Abwehrsystems sitzen am Darm. Ist die Barriere durchlässig, wird es dauernd gereizt und reagiert überschiessend — auch auf Pollen."}},
- {id:"asthma",g:"h",n:"Asthma",k:["asthma"],w:[1,1,2],
+ {id:"asthma",g:"h",n:"Asthma",k:["asthma","atemnot","kurzatmig","luftnot"],w:[1,1,2],
   y:{s:"Reflux und Gärung belasten die Atemwege.",p:"Schimmel und Pilze können Asthma unterhalten.",l:"Allergische Bereitschaft aus dem Darm."}},
  {id:"aphthen",g:"h",n:"Aphthen / Mundwinkelrisse",k:["aphth","aphten","mundwinkel","rhagaden"],w:[1,2,2],
   y:{s:"B-Vitamin- und Eisenmangel durch Fehlbesiedlung.",p:"Mundwinkelrisse sind oft Pilz (Candida), Aphthen oft viral.",l:"Die Mundschleimhaut spiegelt die Darmschleimhaut."},e:["cand"]},
 
- {id:"infekte",g:"i",n:"Häufige Infekte",k:["infekt","immer krank","staendig krank","oft krank","dauernd krank","erkaeltet","infektanfaellig","abwehrschwach","immunschwach"],w:[0,2,2],
+ {id:"infekte",g:"i",n:"Häufige Infekte",k:["viele infekte","haeufige infekte","haeufig infekt","staendig infekt","immer wieder infekt","oft infekt","infekt nach infekt","immer krank","staendig krank","oft krank","dauernd krank","erkaeltet","infektanfaellig","lungenentz","abwehrschwach","immunschwach"],w:[0,2,2],
   y:{p:"Eine belastete Abwehr kommt nie zur Ruhe, wenn stille Erreger mitlaufen.",l:"Die Abwehr sitzt am Darm — ist die Barriere gestört, fehlt sie draussen."}},
  {id:"blase",g:"i",n:"Wiederkehrende Blasenentzündung",k:["blasenentzuend","harnwegsinfekt","blaseninfekt","zystitis","cystitis"],w:[1,3,1],
   y:{s:"Darmkeime (E. coli) wandern aus einem fehlbesiedelten Darm aus.",p:"Immer wiederkehrende Blasenentzündungen zeigen versteckte Keime in Biofilmen.",l:"Ein durchlässiger Darm erleichtert das Auswandern von Darmkeimen."}},
@@ -351,23 +305,23 @@ var S = [
   y:{p:"Borrelien verstecken sich in Gewebe und Biofilmen und zeigen sich oft erst Jahre später — mit wandernden Schmerzen, Erschöpfung und Nervenzeichen.",l:"Bakterienbestandteile reizen die Barriere."},e:["bor"]},
  {id:"wandernd",g:"i",n:"Wandernde Schmerzen",k:["wandernd","mal hier mal dort","springende schmerzen","schmerzen wechseln"],w:[0,3,1],
   y:{p:"Schmerzen, die den Ort wechseln, sind ein Leitzeichen für Borrelien und andere versteckte Erreger.",l:"Durchgetretene Bakterienbestandteile reizen wechselnde Gelenke."},e:["bor"]},
- {id:"lymph",g:"i",n:"Geschwollene Lymphknoten",k:["lymphknoten","geschwollene druesen","dicke druesen","druesen geschwollen"],w:[0,3,0],
+ {id:"lymph",g:"i",n:"Geschwollene Lymphknoten",k:["lymphknoten","milz","geschwollene druesen","dicke druesen","druesen geschwollen"],w:[0,3,0],
   y:{p:"Die Lymphknoten sind die Wachposten der Abwehr — geschwollen zeigen sie, dass gekämpft wird."},e:["ebv"]},
  {id:"temp",g:"i",n:"Nachtschweiss / Frösteln",k:["nachtschweiss","schwitze nachts","schwitzen nachts","nachts schwitzen","subfebril","leicht erhoeht","erhoehte temperatur","froestel","schuettelfrost"],w:[0,3,0],
   y:{p:"Das Abwehrsystem arbeitet auf Sparflamme gegen einen Erreger — typisch für stille Infekte."}},
- {id:"gelenk",g:"i",n:"Gelenkschmerzen",k:["gelenk","arthrit","rheuma","knie","huefte"],w:[1,2,2],
+ {id:"gelenk",g:"b",n:"Gelenkschmerzen / Arthrose / Rheuma",k:["gelenk","arthrit","arthros","rheuma","knie","huefte","heberden","fingergelenk","polyarthr","gelenke tun weh"],w:[1,2,2],
   y:{s:"Bakterienbestandteile aus einem fehlbesiedelten Darm können Gelenke reizen.",p:"Borrelien, Chlamydien und andere Erreger setzen sich gern in Gelenke.",l:"Durchgetretene Stoffe lösen Immunreaktionen in den Gelenken aus."}},
- {id:"muskel",g:"i",n:"Muskelschmerzen / Fibromyalgie",k:["muskelschmerz","fibromyalg","gliederschmerz","alles tut weh","ganzkoerperschmerz"],w:[1,2,2],
+ {id:"muskel",g:"b",n:"Muskelschmerzen / Fibromyalgie",k:["muskelschmerz","fibromyalg","gliederschmerz","alles tut weh","ganzkoerperschmerz"],w:[1,2,2],
   y:{s:"Gärstoffe übersäuern das Gewebe.",p:"Chronische Virus- und Bakterienlasten zeigen sich oft als Ganzkörperschmerz.",l:"Stille Entzündung aus dem Darm."}},
- {id:"nerven",g:"i",n:"Kribbeln / Taubheit / Nervenschmerz",k:["kribbel","taubheit","taube","taub","brennende fuesse","ameisenlaufen","neuropath","nervenschmerz","neuralgie"],w:[1,2,1],
+ {id:"nerven",g:"n",n:"Kribbeln / Taubheit / Nervenschmerz",k:["kribbel","taubheit","taube","taub","brennende fuesse","ameisenlaufen","neuropath","nervenschmerz","neuralgie"],w:[1,2,1],
   y:{s:"B12-Mangel durch Fehlbesiedlung schädigt die Nerven.",p:"Herpesviren und Borrelien sitzen gern in Nerven.",l:"Entzündungsstoffe reizen die Nerven."}},
- {id:"tinnitus",g:"i",n:"Tinnitus / Ohrgeräusche",k:["tinnitus","ohrgeraeusch","pfeifen im ohr","rauschen im ohr","piepen im ohr","ohrensausen","hoersturz"],w:[1,2,1],
+ {id:"tinnitus",g:"n",n:"Tinnitus / Ohrgeräusche",k:["tinnitus","ohrgeraeusch","pfeifen im ohr","rauschen im ohr","piepen im ohr","ohrensausen","hoersturz"],w:[1,2,1],
   y:{s:"Darm-Hirn-Achse und Nährstoffmangel (B12).",p:"Herpes- und Zosterviren, EBV, Borrelien und Zahnherde gehören zu den häufigsten versteckten Auslösern.",l:"Stille Entzündung belastet das feine Innenohr."}},
- {id:"schwindel",g:"i",n:"Schwindel",k:["schwindel","schwindlig","benommen","gleichgewicht"],w:[1,2,1],
+ {id:"schwindel",g:"n",n:"Schwindel",k:["schwindel","schwindlig","benommen","gleichgewicht"],w:[1,2,1],
   y:{s:"Nährstoffmangel und Gärgifte.",p:"Viren am Gleichgewichtsnerv (z. B. Herpes) und Borrelien.",l:"Stille Entzündung."}},
- {id:"zittern",g:"i",n:"Zittern",k:["zitter","tremor"],w:[1,1,1],
+ {id:"zittern",g:"n",n:"Zittern",k:["zitter","tremor"],w:[1,1,1],
   y:{s:"B12- und Magnesiummangel.",p:"Erreger mit Vorliebe für Nerven und Pilzgifte.",l:"Entzündung im Nervensystem über die Darm-Hirn-Achse."}},
- {id:"zahn",g:"i",n:"Wurzelbehandelte Zähne / Zahnherd",k:["wurzelbehandel","wurzelbehandl","toter zahn","tote zaehne","zahnherd","kieferentzuend","kieferostitis","nico","fistel","parodont","zahnfleischentzuend"],w:[0,3,0],
+ {id:"zahn",g:"i",n:"Wurzelbehandelte Zähne / Zahnherd",k:["wurzelbehandel","wurzelbehandl","toter zahn","tote zaehne","zahnherd","kieferentzuend","kieferostitis","nico","fistel","parodont","implantat","zahnfleischentzuend","zahnfleischbluten","zahnfleisch blutet","zahnfleischrueckgang"],w:[0,3,0],
   y:{p:"Tote, wurzelbehandelte Zähne und Kieferherde sind klassische Störfelder — Keime streuen von dort still in den ganzen Körper."},e:["zahn"]},
  {id:"sinus",g:"i",n:"Chronische Nebenhöhlen",k:["nebenhoehle","sinusitis","chronischer schnupfen","nase immer zu","dauerschnupfen"],w:[0,2,1],
   y:{p:"Chronische Nebenhöhlen sind ein häufiges Versteck für Bakterien und Pilze in Biofilmen.",l:"Allergische Bereitschaft aus dem Darm hält die Schleimhäute geschwollen."}},
@@ -378,10 +332,127 @@ var S = [
  {id:"covid",g:"i",n:"Long Covid / nach Virusinfekt",k:["long covid","post covid","postcovid","nach covid","seit covid","nach corona","seit corona","post vac","postvac","post viral","postviral"],w:[1,3,2],
   y:{s:"Nach Covid ist SIBO auffallend häufig.",p:"Viren und wieder aufgeflammte EBV- und Herpesviren wirken nach Covid weiter.",l:"Virusreste im Darm halten die Schleimhaut entzündet."},e:["ebv"]},
  {id:"tiere",g:"i",n:"Enger Tierkontakt",k:["katze","katzen","hund","hunde","pferd","pferde","bauernhof"],w:[0,1,0],
-  y:{p:"Enger Tierkontakt kann Parasiten und Keime (z. B. Bartonellen, Toxoplasmen) übertragen."},e:["para"]}
+  y:{p:"Enger Tierkontakt kann Parasiten und Keime (z. B. Bartonellen, Toxoplasmen) übertragen."},e:["para"]},
+ /* ===== Erweiterung Folgebeschwerden (23.10.2026) ===== */
+
+ /* --- Verdauung --- */
+ {id:"schleimstuhl",g:"v",n:"Schleim / Blut im Stuhl",k:["schleim im stuhl","stuhl mit schleim","schleimiger stuhl","blut im stuhl","blutiger stuhl","stuhl mit blut"],w:[1,2,3],
+  y:{s:"Eine gereizte Darmwand bildet Schutzschleim.",p:"Parasiten, Amöben und aggressive Bakterien verletzen die Schleimhaut.",l:"Schleim und Blut zeigen eine entzündete, offene Schleimhaut — die Barriere ist angegriffen."},e:["para"]},
+ {id:"haemo",g:"v",n:"Hämorrhoiden / Krampfadern",k:["krampfader","besenreiser","venenschwaech","haemorrhoid","haemoride","haemorride","haemorrhoide","analfissur","fissur","analvenen"],w:[1,0,1],
+  y:{s:"Verstopfung und Pressen bei der Methan-Form von SIBO stauen das Blut in Becken und Beinen — Analvenen und Beinvenen leiden mit.",l:"Stille Entzündung schwächt die Venenwände."}},
+ {id:"pankreas",g:"v",n:"Verdauungsschwäche / Enzymmangel",k:["bauchspeicheldruese","pankreas","verdauungsenzym","enzymmangel","verdauungsschwaech","schwache verdauung"],w:[2,0,1],
+  y:{s:"Fehlen Enzyme, bleibt Nahrung liegen und wird zum Futter für Bakterien im Dünndarm.",l:"Halb verdaute Eiweisse reizen die Schleimhaut."}},
+ {id:"appetit",g:"v",n:"Appetitlosigkeit",k:["appetitlos","kein hunger","keinen hunger","keinen appetit","kein appetit","mag nichts essen"],w:[2,1,0],
+  y:{s:"Ein gefüllter, gärender Dünndarm dämpft das Hungergefühl.",p:"Erreger und ihre Gifte nehmen die Lust am Essen."}},
+ {id:"zucker",g:"v",n:"Unterzucker / zittrig vor dem Essen",k:["unterzucker","hypoglyk","zittrig vor dem essen","hungerast","zittrig wenn ich nichts esse","wird schwach wenn ich nicht esse"],w:[1,1,1],
+  y:{s:"Bakterien im Dünndarm stören die gleichmässige Aufnahme — der Blutzucker schwankt.",p:"Candida verbraucht Zucker und treibt die Achterbahn an.",l:"Stille Entzündung macht die Zellen träge für Insulin."},e:["cand"]},
+
+ /* --- Muskeln & Gelenke --- */
+ {id:"ruecken",g:"b",n:"Rückenschmerzen / Ischias",k:["ruecken","kreuzweh","kreuzschmerz","kreuz tut weh","hexenschuss","lumbago","ischias","bandscheib","lendenwirbel","lws","bws","iliosakral","isg","steissbein"],w:[1,1,2],
+  y:{s:"Der Darm liegt direkt vor der Lendenwirbelsäule — Blähungen und Verstopfung drücken nach hinten und verspannen das Kreuz.",p:"Erreger in Muskeln, Faszien und Gelenken (z. B. Borrelien) unterhalten Rückenschmerzen ohne Befund.",l:"Stille Entzündung aus dem Darm hält Muskeln und Faszien gereizt; Rückenschmerz, der nicht heilt, ist oft entzündlich."}},
+ {id:"nacken",g:"b",n:"Nacken- / Schulterverspannung",k:["nacken","schulter","verspann","hws","steifer hals","halswirbel"],w:[1,1,1],
+  y:{s:"Magnesium wird bei Fehlbesiedlung schlecht aufgenommen — die Muskeln bleiben hart.",p:"Zahnherde und Kieferstörfelder strahlen in Nacken und Schultern aus.",l:"Stille Entzündung hält die Muskulatur angespannt."},e:["zahn"]},
+ {id:"krampf",g:"b",n:"Muskelkrämpfe / Lidzucken",k:["wadenkrampf","wadenkraempf","beinkraempf","muskelkrampf","muskelkraempf","fusskraempf","zehenkraempf","kraempfe in den beinen","krampf in der wade","kraempfe nachts","lidzucken","augenzuck","augenlid zuckt","muskelzuck","muskelzittern"],w:[2,0,1],
+  y:{s:"Krämpfe und Zucken sind klassische Magnesiumzeichen — Magnesium wird bei Fehlbesiedlung schlecht aufgenommen.",l:"Eine gestörte Schleimhaut nimmt Mineralstoffe schlecht auf."}},
+ {id:"muskelschwach",g:"b",n:"Muskelschwäche / Kraftverlust",k:["muskelschwaech","schwache muskeln","kraftverlust","keine kraft in","muskelabbau"],w:[1,1,1],
+  y:{s:"Eiweiss, B12 und Mineralstoffe kommen nicht an.",p:"Chronische Erreger zehren an der Muskulatur.",l:"Stille Entzündung baut Muskeln ab."}},
+ {id:"sehnen",g:"b",n:"Sehnen / Tennisarm / Fersensporn",k:["sehne","tendin","tennisarm","tennisellbogen","golferarm","schleimbeutel","bursitis","fersensporn","plantar","achilles","epicondyl","frozen shoulder"],w:[0,2,2],
+  y:{p:"Erreger setzen sich gern an Sehnenansätzen fest, wo wenig Blut hinkommt.",l:"Sehnen reagieren empfindlich auf stille Entzündung — Reizungen ohne Überlastung zeigen oft den Darm."}},
+ {id:"morgensteif",g:"b",n:"Morgensteifigkeit",k:["morgensteif","steif am morgen","morgens steif","am morgen steif","anlaufschmerz"],w:[0,1,2],
+  y:{p:"Erreger halten die Gelenkinnenhaut gereizt.",l:"Steifigkeit am Morgen ist ein Entzündungszeichen — die Nacht reicht nicht, um die Entzündungsstoffe abzubauen."}},
+ {id:"osteo",g:"b",n:"Osteoporose / Knochendichte",k:["osteopor","osteopenie","knochendichte","knochenschwund","bruechige knochen"],w:[2,0,2],
+  y:{s:"Calcium, Vitamin D und K2 werden bei Fehlbesiedlung schlecht aufgenommen.",l:"Stille Entzündung aktiviert die knochenabbauenden Zellen; die Aufnahme ist gestört."}},
+ {id:"gicht",g:"b",n:"Gicht / Harnsäure",k:["gicht","harnsaeure","podagra"],w:[1,0,2],
+  y:{s:"Ein gestörter Darm scheidet weniger Harnsäure aus — normal übernimmt er rund ein Drittel davon.",l:"Stille Entzündung und eine belastete Leber erhöhen die Harnsäure."}},
+ {id:"kiefer",g:"b",n:"Zähneknirschen / Kiefer",k:["knirsch","zaehne knirschen","kieferpressen","pressen nachts","cmd","kiefergelenk","kiefer"],w:[0,2,0],
+  y:{p:"Zähneknirschen in der Nacht gilt in der Naturheilkunde als klassisches Wurmzeichen; der Kiefer selbst ist oft ein Störfeld."},e:["para","zahn"]},
+
+ /* --- Nerven & Sinne --- */
+ {id:"gedaechtnis",g:"n",n:"Gedächtnis / Demenz",k:["gedaechtnis","merkfaehig","demenz","alzheimer","vergesse alles"],w:[1,2,2],
+  y:{s:"B12-Mangel und Gärgifte belasten das Gehirn.",p:"Herpesviren, Borrelien und Spirochäten werden bei Gedächtnisabbau gefunden.",l:"Darm-Hirn-Achse: Was die Darmbarriere durchbricht, öffnet auch die Blut-Hirn-Schranke."},e:["herp","bor"]},
+ {id:"parkinson",g:"n",n:"Parkinson",k:["parkinson"],w:[3,1,2],
+  y:{s:"Bei Parkinson ist SIBO auffallend häufig, die Verdauung ist meist Jahre vorher gestört — und SIBO stört die Aufnahme von Levodopa.",p:"Erreger werden als Mitauslöser diskutiert.",l:"Der Darm gilt heute als möglicher Ausgangsort: Entzündung im Darm wandert über den Vagusnerv zum Gehirn."}},
+ {id:"adhs",g:"n",n:"ADHS / Autismus / Unruhe (Kind)",k:["adhs","autis","ads","hyperaktiv","zappelig","kann nicht stillsitzen","unruhiges kind"],w:[1,1,2],
+  y:{s:"Gärstoffe aus dem Dünndarm wirken aufs Nervensystem.",p:"Würmer und Pilze machen Kinder unruhig.",l:"Darm-Hirn-Achse: Entzündungsstoffe und Unverträglichkeiten beeinflussen Aufmerksamkeit und Verhalten."},e:["para"]},
+ {id:"riechen",g:"n",n:"Geruchs- / Geschmacksverlust",k:["geruchsverlust","geschmacksverlust","riecht nichts","rieche nichts","schmeckt nichts","schmecke nichts","metallgeschmack"],w:[1,2,1],
+  y:{s:"Zinkmangel durch gestörte Aufnahme dämpft Geruch und Geschmack.",p:"Viren schädigen die Riechnerven.",l:"Zink wird an der Schleimhaut aufgenommen."}},
+ {id:"augen",g:"n",n:"Trockene Augen / Sehstörung",k:["trockene augen","augen trocken","augenbrennen","augen brennen","sehstoer","verschwommen","sehkraft","flimmern vor den augen","nachtblind"],w:[1,1,2],
+  y:{s:"Vitamin A und B12 werden bei Fehlbesiedlung schlecht aufgenommen.",p:"Viren wie Herpes und Zoster können das Auge betreffen.",l:"Trockene Augen gehören oft zu einem entzündlichen, autoimmunen Geschehen aus dem Darm."}},
+ {id:"augenentz",g:"n",n:"Augenentzündung",k:["augenentz","bindehaut","uveitis","iritis","gerstenkorn","rote augen"],w:[0,2,2],
+  y:{p:"Bakterien und Viren unterhalten wiederkehrende Augenentzündungen.",l:"Uveitis und Iritis gehen häufig mit entzündlichen Darmerkrankungen einher."},e:["herp"]},
+ {id:"ohr",g:"n",n:"Ohrenschmerzen / Mittelohr",k:["ohrenschmerz","ohrenweh","mittelohr","ohrentz","gehoergang","ohr verstopft","druck im ohr"],w:[0,2,1],
+  y:{p:"Wiederkehrende Ohrenentzündungen zeigen versteckte Keime im Nasen-Rachen-Raum.",l:"Allergische Bereitschaft aus dem Darm hält die Ohrtrompete geschwollen."}},
+
+ /* --- Allgemein --- */
+ {id:"frieren",g:"a",n:"Frieren / kalte Hände und Füsse",k:["frieren","friere","kaelte","kalte haende","kalte fuesse","kaelteempfindlich","immer kalt","eiskalte"],w:[1,1,1],
+  y:{s:"Eisenmangel und eine träge Schilddrüse bei Fehlbesiedlung senken die Wärme.",p:"Der Körper zieht Energie für die Abwehr ab.",l:"Nährstoffe für die Wärmebildung kommen nicht an."}},
+ {id:"gewichtzu",g:"a",n:"Übergewicht / kann nicht abnehmen",k:["uebergewicht","nehme zu","zugenommen","gewichtszunahme","kann nicht abnehmen","abnehmen klappt nicht","bauchfett","nimmt zu"],w:[1,1,2],
+  y:{s:"Bestimmte Darmbakterien ziehen mehr Kalorien aus der Nahrung; Methanbildner verlangsamen den Darm.",p:"Candida treibt den Zuckerhunger.",l:"Stille Entzündung blockiert die Fettverbrennung und macht insulinresistent."},e:["cand"]},
+ {id:"schwitzen",g:"a",n:"Starkes Schwitzen / Körpergeruch",k:["starkes schwitzen","schwitze viel","schwitze stark","schweissausbr","koerpergeruch","schweiss riecht"],w:[1,1,1],
+  y:{s:"Gärstoffe werden über die Haut ausgeschieden.",p:"Stille Erreger halten das Abwehrsystem auf Temperatur.",l:"Die Haut übernimmt Entgiftung, wenn der Darm durchlässig ist."}},
+ {id:"amalgam",g:"a",n:"Amalgam / Schwermetalle",k:["amalgam","schwermetall","quecksilber","metallbelastung","bleibelastung"],w:[0,2,2],
+  y:{p:"Metalle schwächen die Abwehr und fördern Pilze, die Metalle binden.",l:"Schwermetalle schädigen die Verbindungen der Darmschleimhaut."},e:["cand"]},
+
+ /* --- Haut --- */
+ {id:"trockenhaut",g:"h",n:"Trockene Haut",k:["trockene haut","haut trocken","rissige haut","haut spannt","schuppige haut"],w:[1,0,2],
+  y:{s:"Fette und fettlösliche Vitamine werden bei Fehlbesiedlung schlecht aufgenommen.",l:"Die Haut spiegelt die Darmschleimhaut — trocken und gereizt aussen wie innen."}},
+ {id:"naegel",g:"h",n:"Brüchige Nägel / weisse Flecken",k:["naegel","bruechige naegel","nagel bricht","rillen in den naegeln","weisse flecken auf"],w:[2,0,2],
+  y:{s:"Zink, Eisen und Biotin werden bei Fehlbesiedlung schlecht aufgenommen.",l:"Gestörte Aufnahme an der Schleimhaut."}},
+ {id:"schuppen",g:"h",n:"Schuppen / Seborrhoe",k:["schuppen","seborrh","kopfhaut juckt","fettige haut","fettige haare"],w:[1,2,1],
+  y:{s:"Fehlbesiedlung verändert die Hautfette.",p:"Hefepilze (Malassezia, Candida) leben von Hautfett.",l:"Die Haut spiegelt den Darm."},e:["cand"]},
+ {id:"ausschlag",g:"h",n:"Ausschlag / rote Flecken",k:["ausschlag","hautausschlag","rote flecken","flecken auf der haut","hautreizung","pusteln"],w:[1,1,2],
+  y:{s:"Histamin und Gärstoffe aus dem Dünndarm.",p:"Pilze und Bakterien zeigen sich auf der Haut.",l:"Was durch die Barriere tritt, wird über die Haut ausgetragen."}},
+ {id:"augenringe",g:"h",n:"Dunkle Augenringe",k:["augenringe","dunkle ringe","schatten unter den augen","ringe unter den augen"],w:[0,1,2],
+  y:{p:"Dunkle Augenringe gelten in der Naturheilkunde als Wurmzeichen.",l:"Allergische Augenringe zeigen eine Belastung durch Unverträglichkeiten."},e:["para"]},
+ {id:"warzen",g:"h",n:"Warzen",k:["warze","warzen","dornwarz"],w:[0,3,1],
+  y:{p:"Warzen sind Viren (HPV), die eine geschwächte Abwehr ausnützen.",l:"Die Abwehr sitzt am Darm."}},
+
+ /* --- Herz, Hormone & Organe --- */
+ {id:"bluthoch",g:"o",n:"Bluthochdruck",k:["bluthochdruck","hoher blutdruck","blutdruck zu hoch","hypertonie","blutdruck hoch"],w:[1,1,2],
+  y:{s:"Gärstoffe und gestörte Darmbakterien beeinflussen die Gefässspannung.",p:"Stille Erreger reizen die Gefässwände.",l:"Stille Entzündung macht die Gefässe steif."}},
+ {id:"blutdrucktief",g:"o",n:"Tiefer Blutdruck / Kreislauf",k:["ohnmacht","kollaps","tiefer blutdruck","niedriger blutdruck","blutdruck tief","hypotonie","kreislauf","schwarz vor den augen","beim aufstehen schwindlig"],w:[1,1,1],
+  y:{s:"Mangel an Eisen und B12 schwächt den Kreislauf.",p:"Chronische Erreger belasten die Nebennieren.",l:"Gestörte Aufnahme von Salzen und Mineralstoffen."}},
+ {id:"cholesterin",g:"o",n:"Cholesterin / Blutfette",k:["cholesterin","blutfett","triglycerid","triglyzerid","ldl"],w:[1,0,1],
+  y:{s:"Die Darmflora steuert den Gallensäure-Kreislauf und damit das Cholesterin.",l:"Stille Entzündung erhöht die Blutfette."}},
+ {id:"niere",g:"o",n:"Nierensteine / Nierenwerte",k:["nierenstein","nierengries","nierenwert","kreatinin","niere"],w:[1,0,2],
+  y:{s:"Wird Fett nicht verdaut, bindet es Calcium — Oxalat aus der Nahrung gelangt frei ins Blut und bildet Steine.",l:"Ein durchlässiger Darm lässt deutlich mehr Oxalat durch."}},
+ {id:"reizblase",g:"o",n:"Reizblase / häufiger Harndrang",k:["reizblase","harndrang","dauernd aufs wc","staendig aufs wc","staendig wasserlassen","blasenschwaech","inkontinenz","interstitielle","blasenschmerz","bettnaess"],w:[1,1,2],
+  y:{s:"Ein geblähter Darm drückt auf die Blase.",p:"Keime in Biofilmen der Blasenwand reizen ohne klassischen Infekt.",l:"Die Blasenschleimhaut reagiert wie die Darmschleimhaut — Reizblase und Leaky Gut treten oft zusammen auf."}},
+ {id:"zyklus",g:"o",n:"PMS / Periode / Wechseljahre",k:["pms","praemenstru","periode","regelschmerz","regelblutung","menstru","zyklus","wechseljahr","hitzewall","menopause","starke blutung"],w:[1,1,2],
+  y:{s:"Blähbauch und Verdauung schwanken mit dem Zyklus — Fehlbesiedlung verstärkt das.",p:"Candida und Erreger verstärken Unterleibsbeschwerden.",l:"Östrogen wird über den Darm ausgeschieden — eine gestörte Flora holt es zurück ins Blut (Östrogendominanz)."},e:["cand"]},
+ {id:"endometriose",g:"o",n:"Endometriose / Eierstockzysten",k:["endometriose","eierstockzyst","zysten am eierstock","pcos","pco syndrom","myom"],w:[1,1,3],
+  y:{s:"Endometriose geht auffallend oft mit SIBO einher.",p:"Bakteriengifte aus dem Darm werden als Mitauslöser diskutiert.",l:"Stille Entzündung und ein gestörter Östrogenabbau über den Darm nähren das Geschehen."},e:["cand"]},
+ {id:"kinderwunsch",g:"o",n:"Unerfüllter Kinderwunsch",k:["kinderwunsch","unfruchtbar","fruchtbarkeit","schwanger werden"],w:[0,2,2],
+  y:{p:"Stille Infekte (z. B. Chlamydien, Ureaplasmen) beeinträchtigen die Fruchtbarkeit.",l:"Stille Entzündung und ein gestörter Hormonhaushalt aus dem Darm."}},
+ {id:"prostata",g:"o",n:"Prostata",k:["prostata","prostatitis","beckenboden schmerz"],w:[0,2,1],
+  y:{p:"Bakterien in Biofilmen unterhalten chronische Prostataentzündungen.",l:"Stille Entzündung aus dem Darm."}},
+ {id:"potenz",g:"o",n:"Potenz / Libido",k:["potenz","erektion","libido","keine lust auf sex","lustlos"],w:[1,1,1],
+  y:{s:"Zinkmangel und Hormonstörungen durch gestörte Aufnahme.",p:"Chronische Infekte im Becken.",l:"Stille Entzündung senkt die Hormonbildung."}},
+ {id:"oedem",g:"o",n:"Wassereinlagerungen",k:["wassereinlager","oedem","geschwollene beine","dicke beine","geschwollene fuesse","schwere beine","geschwollene finger"],w:[0,1,2],
+  y:{p:"Eine belastete Lymphe staut sich.",l:"Ist die Barriere durchlässig, geht Eiweiss verloren und Wasser tritt ins Gewebe; Histamin macht Gefässe undicht."}},
+ {id:"husten",g:"o",n:"Husten / Räusperzwang / Schleim",k:["husten","raeusper","schleim im hals","verschleim","bronchitis","bronchien","copd","postnasal"],w:[2,2,1],
+  y:{s:"Stiller Reflux durch Gasdruck aus dem Dünndarm reizt Hals und Bronchien — Räusperzwang ohne Erkältung ist ein typisches Zeichen.",p:"Bakterien und Pilze in den Atemwegen.",l:"Allergische Bereitschaft aus dem Darm."}},
+ {id:"heiser",g:"o",n:"Heiserkeit / Kloss im Hals",k:["heiser","kloss im hals","globus","stimme weg","stimme versagt"],w:[2,0,0],
+  y:{s:"Stiller Reflux: Gasdruck aus dem Darm drückt Säuredämpfe bis an den Kehlkopf."}},
+ {id:"halsweh",g:"o",n:"Halsweh / Mandeln",k:["halsweh","halsschmerz","mandeln","mandelentz","angina","kratzen im hals"],w:[0,3,1],
+  y:{p:"Wiederkehrende Halsentzündungen zeigen Keime, die in den Mandeln sitzen bleiben (Streptokokken, EBV).",l:"Die Abwehr sitzt am Darm."},e:["ebv"]},
+ {id:"mundtrocken",g:"v",n:"Mundtrockenheit",k:["mundtrocken","trockener mund","mund trocken"],w:[1,1,1],
+  y:{s:"Fehlbesiedlung und Nährstoffmangel stören die Speicheldrüsen.",p:"Candida im Mund und Viren in den Speicheldrüsen.",l:"Trockene Schleimhäute im Mund gehören oft zu einem autoimmunen Geschehen aus dem Darm."},e:["cand"]},
+ {id:"reizempf",g:"n",n:"Licht- / Lärmempfindlichkeit",k:["lichtempfindlich","laermempfindlich","geraeuschempfindlich","reizempfindlich","reizueberflutung"],w:[1,1,2],
+  y:{s:"Bakterielles Histamin aus dem Dünndarm macht das Nervensystem überempfindlich.",p:"Erreger mit Vorliebe für Nerven senken die Reizschwelle.",l:"Durchtretendes Histamin und Entzündungsstoffe reizen das Gehirn — die Filter werden dünn."}},
+ {id:"wetter",g:"a",n:"Wetterfühligkeit",k:["wetterfuehl","wetterwechsel","wetterumschwung","foehn"],w:[0,1,1],
+  y:{p:"Stille Erreger in Gelenken und Narben melden sich bei Druckwechsel.",l:"Ein entzündetes Gewebe reagiert stärker auf Luftdruck."}},
+ {id:"narben",g:"a",n:"Narben / Operationen",k:["narbe","narben","operation","operiert","narkose"],w:[1,1,1],
+  y:{s:"Nach Bauchoperationen bilden sich Verwachsungen, die den Dünndarm bremsen.",p:"Narben gelten als Störfelder, in denen sich Keime halten können.",l:"Narkose und Antibiotika rund um eine OP belasten die Schleimhaut."}},
+ {id:"schnarchen",g:"o",n:"Schnarchen / Atemaussetzer",k:["schnarch","schlafapnoe","atemaussetzer"],w:[1,0,1],
+  y:{s:"Nächtlicher Reflux und ein geblähter Bauch drücken aufs Zwerchfell.",l:"Unverträglichkeiten lassen die Schleimhäute im Rachen anschwellen."}},
+ {id:"epilepsie",g:"n",n:"Epilepsie / Krampfanfälle",k:["epilep","krampfanfall","krampfanfaell","anfaelle"],w:[1,1,2],
+  y:{s:"Nährstoffmangel (B6, Magnesium) senkt die Krampfschwelle.",p:"Erreger mit Vorliebe für Nerven und Pilzgifte.",l:"Darm-Hirn-Achse: Entzündungsstoffe aus dem Darm reizen das Gehirn."}},
+ {id:"chemo",g:"o",n:"Krebs / Chemotherapie / Bestrahlung",k:["chemo","bestrahlung","krebs","tumor","radiotherapie"],w:[2,1,3],
+  y:{s:"Chemotherapie und Bestrahlung lähmen die Putzwelle und zerstören die Flora — SIBO ist danach sehr häufig.",p:"Die geschwächte Abwehr lässt Candida und Viren aufblühen.",l:"Chemotherapie greift gezielt sich schnell teilende Zellen an — die Darmschleimhaut erneuert sich alle paar Tage und wird stark geschädigt."},e:["cand"]}
 ];
 
-var GRUPPEN = {v:"Verdauung", a:"Allgemein & Kopf", h:"Haut & Allergie", i:"Infekt & Erreger"};
+var GRUPPEN = {v:"Verdauung", a:"Allgemein & Psyche", n:"Kopf, Nerven & Sinne", b:"Muskeln, Gelenke & Rücken", h:"Haut & Allergie", o:"Herz, Hormone & Organe", i:"Infekt & Erreger"};
 
 /* ---------- Text-Normalisierung ---------- */
 function norm(t){
@@ -400,14 +471,16 @@ S.forEach(function(m){
 
 function klauseln(text){
   /* in Teilsätze trennen; Teilsätze, die mit «kein/keine/ohne» beginnen, werden ignoriert */
-  return String(text).split(/[,;.\n\/]+|\s+und\s+|\s+sowie\s+/i).map(norm).filter(function(c){
-    return c.trim() && !/^ (kein|keine|keinen|keiner|keinerlei|ohne) /.test(c);
+  return String(text).split(/[,;.\n\/]+|\s+und\s+|\s+sowie\s+/i).map(function(r){
+    return {r:r.trim(), n:norm(r)};
+  }).filter(function(c){
+    return c.n.trim() && !/^ (kein|keine|keinen|keiner|keinerlei|ohne) /.test(c.n);
   });
 }
 
 function trifft(m, kl){
   for (var i=0;i<kl.length;i++){
-    var sp = kl[i], cp = sp.replace(/ /g,"");
+    var sp = kl[i].n, cp = sp.replace(/ /g,"");
     for (var j=0;j<m.kk.length;j++){
       var k = m.kk[j];
       if (k.cp.length <= 4){ if (sp.indexOf(" " + k.sp + " ") >= 0) return true; }
@@ -437,145 +510,108 @@ function auswerten(){
   if (sc.p >= 6){ sc.l += 1; wi.l.push({n:"Folge der Erregerlast", w:1, t:"Erreger und ihre Gifte greifen die Darmbarriere an."}); }
   ["s","p","l"].forEach(function(f){ wi[f].sort(function(a,b){ return b.w - a.w; }); });
 
-  zeigeErkannt(hits);
-  zeigeErgebnis(sc, wi, erreger, hits.length);
+  var offen = kl.filter(function(c){ return !S.some(function(m){ return trifft(m,[c]); }); }).map(function(c){ return c.r; });
+  zeigeErkannt(hits, offen);
+  zeigeErgebnis(sc, wi, erreger, hits.length, hits);
 }
 
-function stufe(x){
-  if (x >= 6) return {t:"Stark beteiligt", c:"s3"};
-  if (x >= 3) return {t:"Wahrscheinlich", c:"s2"};
-  if (x >= 1) return {t:"Möglich", c:"s1"};
-  return {t:"Kein Hinweis", c:""};
-}
+/* Punkte → Prozent: steigt rasch an und nähert sich 100 % nur langsam */
+function prozent(x){ return x <= 0 ? 0 : Math.min(98, Math.round(100 * (1 - Math.exp(-x / 7)))); }
 
 function esc(t){ return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
 
-function progZeile(o){
-  var k = /^Killing/.test(o.p);
-  return '<div class="pl"><span class="nr">pr' + o.r + (o.d ? '<span class="dot" title="Darm"></span>' : '') + '</span>' +
-         '<span class="pn">' + esc(o.n) + (o.w ? '<small>' + esc(o.w) + '</small>' : '') + '</span>' +
-         '<span class="ps ' + (k ? 'k' : 'h') + '">' + esc(o.p) + '</span></div>';
-}
 
-function zeigeErkannt(hits){
+function zeigeErkannt(hits, offen){
   var box = document.getElementById("erkanntBox"), el = document.getElementById("erkannt");
   var text = document.getElementById("eingabe").value.trim();
   if (!hits.length && !text){ box.style.display = "none"; return; }
   box.style.display = "";
   el.innerHTML = hits.length
     ? hits.map(function(m){ return '<span class="tag">' + esc(m.n) + '</span>'; }).join("")
-    : '<span class="leer">Noch kein bekanntes Merkmal erkannt — andere Worte versuchen oder unten Zeichen antippen.</span>';
+    : '<span class="leer">Noch kein bekanntes Merkmal erkannt.</span>';
+  if (offen && offen.length){
+    el.innerHTML += '<div class="offen"><b>Nicht erkannt:</b> ' + offen.map(function(o){ return '<span class="tag tag-off">' + esc(o) + '</span>'; }).join("") + '</div>';
+  }
 }
 
-function zeigeErgebnis(sc, wi, erreger, anzahl){
+function zeigeErgebnis(sc, wi, erreger, anzahl, hits){
+  var H = {}; (hits||[]).forEach(function(m){ H[m.id] = m; });
   var out = document.getElementById("ergebnis");
   if (!anzahl){ out.innerHTML = ""; return; }
 
   var order = ["s","p","l"].sort(function(a,b){ return sc[b] - sc[a]; });
+  var sicht = order.filter(function(f){ return sc[f] > 0; });
   var aktiv = order.filter(function(f){ return sc[f] >= 3; });
 
   /* Zusammenfassung */
   var sum;
   if (!aktiv.length){
-    sum = "Keine deutliche Spur. Die Beschwerden geben nur leise Hinweise — weitere Zeichen ergänzen.";
+    sum = "Keine deutliche Spur — die Beschwerden zeigen nur leise in Richtung Darm.";
   } else {
-    var namen = aktiv.map(function(f){ return F[f].name; });
     sum = "Hauptspur: <b>" + esc(F[aktiv[0]].name) + "</b>" +
-          (namen.length > 1 ? ", dazu " + esc(namen.slice(1).join(" und ")) : "") + ".";
-    if (aktiv.length > 1) sum += " Die drei hängen eng zusammen: Erreger und SIBO öffnen der durchlässigen Barriere den Weg.";
+          (aktiv.length > 1 ? ", dazu " + esc(aktiv.slice(1).map(function(f){ return F[f].name; }).join(" und ")) : "") + ".";
   }
-  var html = '<section class="box summary"><h2>Einschätzung</h2><p>' + sum + '</p></section>';
+  var html = '<section class="box summary"><h2>Einschätzung</h2><p>' + sum + '</p><div class="sumrow">' +
+    order.map(function(f){ return '<span style="--c:' + F[f].farbe + '"><b>' + prozent(sc[f]) + ' %</b>' + esc(F[f].name) + '</span>'; }).join("") +
+    '</div><button class="mehr" id="erklBtn">Was steckt dahinter?</button><div class="info" id="erkl">' + ERKLAERUNG + '</div></section>';
 
-  /* Karten */
-  order.forEach(function(f){
-    var fa = F[f], st = stufe(sc[f]), pct = Math.min(100, sc[f] * 10);
+  /* Karten — nur wo es einen Hinweis gibt */
+  sicht.forEach(function(f){
+    var fa = F[f], pct = prozent(sc[f]);
     html += '<section class="box card" style="--c:' + fa.farbe + '">' +
-      '<div class="kopf"><h3>' + esc(fa.name) + '</h3><span class="stufe ' + st.c + '">' + st.t + '</span></div>' +
+      '<div class="kopf"><h3>' + esc(fa.name) + '</h3><span class="pct">' + pct + ' %</span></div>' +
       '<div class="bar"><span style="width:' + pct + '%"></span></div>' +
       '<p class="kurz">' + esc(fa.kurz) + '</p>';
 
-    if (wi[f].length){
-      html += '<div class="warum"><h5>Warum</h5>' + wi[f].map(function(x){
-        return '<div class="wi"><b>' + esc(x.n) + '<span class="pkt">' + "●●●".slice(0, x.w) + '</span></b>' +
-               (x.t ? '<span class="tx">' + esc(x.t) + '</span>' : '') + '</div>';
-      }).join("") + '</div>';
-    } else {
-      html += '<p class="leer">Aus den Beschwerden kein Hinweis.</p>';
-    }
+    html += '<div class="warum"><h5>Warum</h5>' + wi[f].map(function(x){
+      return '<div class="wi"><b>' + esc(x.n) + '<span class="pkt">' + "●●●".slice(0, x.w) + '</span></b>' +
+             (x.t ? '<span class="tx">' + esc(x.t) + '</span>' : '') + '</div>';
+    }).join("") + '</div>';
 
-    if (sc[f] >= 1){
-      var pl = fa.prog.slice();
-      if (f === "p"){
-        Object.keys(erreger).forEach(function(x){ var e = E[x]; pl.push({r:e.r, n:e.pn, p:e.p, d:e.d, w:"Spur: " + e.n}); });
-      }
-      html += '<div class="prog"><h5>Programme</h5>' + pl.map(progZeile).join("") + '</div>';
-    }
+    var hw = hinweise(f, H);
+    if (hw) html += '<div class="hinw">' + hw + '</div>';
 
-    html += '<button class="mehr" data-f="' + f + '">Mehr erfahren</button>' +
-      '<div class="info" id="info-' + f + '">' + fa.info.map(function(i){
-        return '<h6>' + esc(i[0]) + '</h6><p>' + esc(i[1]) + '</p>';
-      }).join("") + '</div></section>';
+    html += '</section>';
   });
 
-  /* Ablauf */
-  var steps = ablauf(sc, erreger);
-  if (steps.length){
-    html += '<section class="box ablauf"><h2>Ablauf</h2>' +
-      '<p class="kurz">Ursachen zuerst klären, dann ausleiten, dann aufbauen.</p><ol>' +
-      steps.map(function(o){
-        var k = /^Killing/.test(o.p);
-        return '<li><span class="zeile"><span class="nr">pr' + o.r + (o.d ? '<span class="dot"></span>' : '') + '</span> ' +
-               esc(o.n) + ' <span class="ps ' + (k ? 'k' : 'h') + '">' + esc(o.p) + '</span>' +
-               (o.w ? '<small>' + esc(o.w) + '</small>' : '') + '</span></li>';
-      }).join("") + '</ol>' +
-      '<button class="copy" id="kopieren">Liste kopieren</button></section>';
-  }
 
   out.innerHTML = html;
-  out._steps = steps;
 }
 
-function ablauf(sc, erreger){
-  var st = [], killing = false;
-  if (sc.p >= 3){ st.push({r:"0245", n:"Basis-Einstieg Pathogene", p:"Killing (Dual) (R) - JW", w:"breites Killing"}); killing = true; }
-  E_REIHE.forEach(function(x){
-    if (erreger[x] && sc.p >= 1){ var e = E[x]; st.push({r:e.r, n:e.pn, p:e.p, d:e.d, w:"Spur: " + e.n}); killing = true; }
-  });
-  if (sc.s >= 3){ st.push({r:"0705", n:"SIBO-Klärung", p:"Killing (R) - JW", d:1, w:"Fehlbesiedlung klären"}); killing = true; }
-  if (erreger.cand && (sc.p >= 1 || sc.s >= 3)){ st.push({r:"0099", n:"Candida / Pilzbelastung", p:"Killing (R) - JW", w:"nach der SIBO-Klärung, vor dem Detox"}); killing = true; }
-  if (killing) st.push(P_FIX.detox);
-  if (sc.s >= 3) st.push({r:"0704", n:"SIBO / Dünndarm", p:"Healing (R) - JW", d:1, w:"Dünndarm beruhigen"});
-  if (sc.l >= 3) st.push({r:"0738", n:"Leaky Gut / Darmbarriere", p:"Healing (R) - JW", d:1, w:"Schleimhaut aufbauen"});
-  if (st.length) st.push(P_FIX.zell);
-  return st;
+/* ---------- Kurze Praxis-Hinweise, nur wenn sie etwas Neues sagen ---------- */
+function hinweise(f, H){
+  var P = [];
+  if (f === "s"){
+    var d = !!H.durchfall, v = !!H.verstopfung, w = !!H.reizdarm;
+    if ((d && v) || w) P.push("<b>Form:</b> Mischform — Wasserstoff- und Methanbildner zugleich.");
+    else if (v) P.push("<b>Form:</b> Methan-Form (Verstopfung) — gilt als die hartnäckigere Art.");
+    else if (d) P.push("<b>Form:</b> Wasserstoff-Form (Durchfall) — die häufigste Art.");
+    if (H.geruch) P.push("<b>Schwefel-Form:</b> schwefelreiche Kost (Eier, Kohl, Zwiebeln) eher meiden.");
+    if (H.postinfekt || H.op || H.narben || H.diabetes || H.schilddr || H.chemo || H.covid || H.parkinson)
+      P.push("<b>Putzwelle:</b> Die Selbstreinigung des Dünndarms (MMC) ist wahrscheinlich gestört — darum kommt SIBO bei solchen Auslösern gern wieder.");
+    if (H.ppi) P.push("<b>Säureblocker:</b> Ohne Magensäure fehlt die erste Keimsperre — die Tür für Keime steht offen.");
+  }
+  if (f === "p" && (H.pilz || H.heisshunger || H.zunge || H.antibio))
+    P.push("<b>Candida:</b> Hefepilze leben von Zucker und wachsen gern zusammen mit SIBO.");
+  if (f === "l" && (H.schmerzmittel || H.alkohol || H.gluten))
+    P.push("<b>Bremse:</b> " + [H.schmerzmittel && "Schmerzmittel", H.alkohol && "Alkohol", H.gluten && "Gluten"].filter(Boolean).join(", ") + " öffnet die Barriere immer wieder.");
+  return P.length ? "<p>" + P.join("</p><p>") + "</p>" : "";
 }
+
+/* ---------- Allgemeine Erklärung ---------- */
+var ERKLAERUNG = '<div class="erkl">' +
+ '<h4>Der Darm ist eine Grenze</h4><p>Er ist die grösste Grenze zwischen innen und aussen. Hier entscheidet der Körper, was hinein darf und was draussen bleibt. Rund drei Viertel der Abwehr sitzen deshalb am Darm.</p>' +
+ '<h4>SIBO — die falschen Bewohner am falschen Ort</h4><p>Im Dünndarm leben normal kaum Bakterien. Wandern zu viele dorthin, essen sie mit: Sie vergären die Nahrung, bevor der Körper sie aufnehmen kann. Das gibt Gas und Blähbauch — und es fehlen Nährstoffe wie B12, Eisen und Magnesium.</p>' +
+ '<h4>Versteckte Pathogene — stille Untermieter</h4><p>Viren, Bakterien, Pilze oder Parasiten, die nach einem Infekt nie ganz verschwunden sind. Sie verstecken sich in Nerven, Zähnen, Gelenken oder unter einer Schutzschicht (Biofilm) und halten die Abwehr dauernd beschäftigt.</p>' +
+ '<h4>Leaky Gut — die undichte Grenze</h4><p>Die Darmschleimhaut ist nur eine einzige Zellschicht dick. Wird sie dauernd gereizt, lockern sich die Dichtungen zwischen den Zellen. Dann gelangt ins Blut, was draussen bleiben sollte: unverdaute Nahrung, Bakterienteile, Gifte.</p>' +
+ '<h4>Was alle drei gemeinsam tun</h4><p>Sie reizen das Abwehrsystem — dauernd und leise. Diese stille Entzündung wandert mit dem Blut durch den ganzen Körper und zeigt sich dort, wo jemand am schwächsten ist: beim einen in der Haut, beim anderen in den Gelenken, im Kopf, in den Nerven oder in der Stimmung. Darum sehen die Beschwerden so verschieden aus, obwohl dahinter oft dasselbe steckt.</p>' +
+ '<h4>Ein Kreislauf</h4><p>Die drei verstärken sich gegenseitig:</p>' +
+ '<div class="kreis">Erreger &amp; SIBO reizen die Schleimhaut<br>↓<br>die Schleimhaut wird durchlässig<br>↓<br>die Abwehr wird müde<br>↓<br>Erreger &amp; Bakterien breiten sich weiter aus</div>' +
+ '</div>';
+
 
 /* ---------- Zeichen zum Antippen ---------- */
-function baueChips(){
-  var box = document.getElementById("chipbox"), html = "";
-  Object.keys(GRUPPEN).forEach(function(g){
-    html += '<div class="grp"><h4>' + GRUPPEN[g] + '</h4><div class="chips">' +
-      S.filter(function(m){ return m.g === g; }).map(function(m){
-        return '<button class="chip" data-id="' + m.id + '">' + esc(m.n) + '</button>';
-      }).join("") + '</div></div>';
-  });
-  box.innerHTML = html;
-}
 
-/* ---------- Kopieren ---------- */
-function kopieren(btn){
-  var steps = document.getElementById("ergebnis")._steps || [];
-  var txt = steps.map(function(o){ return "pr" + o.r + " " + o.n + " – " + o.p; }).join("\n");
-  function ok(){ btn.textContent = "Kopiert ✓"; btn.classList.add("ok"); setTimeout(function(){ btn.textContent = "Liste kopieren"; btn.classList.remove("ok"); }, 1800); }
-  if (navigator.clipboard && window.isSecureContext){
-    navigator.clipboard.writeText(txt).then(ok, function(){ alt(); });
-  } else { alt(); }
-  function alt(){
-    var ta = document.createElement("textarea"); ta.value = txt; ta.setAttribute("readonly","");
-    ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta);
-    ta.select(); try { document.execCommand("copy"); ok(); } catch(e){} document.body.removeChild(ta);
-  }
-}
 
 /* ---------- Ereignisse ---------- */
 var timer = null;
@@ -589,27 +625,19 @@ document.getElementById("los").addEventListener("click", function(){
 });
 document.getElementById("neu").addEventListener("click", function(){
   document.getElementById("eingabe").value = ""; getippt = {};
-  Array.prototype.forEach.call(document.querySelectorAll(".chip.on"), function(c){ c.classList.remove("on"); });
+  
   auswerten(); document.getElementById("eingabe").focus();
 });
-document.getElementById("chipbox").addEventListener("click", function(ev){
-  var c = ev.target.closest(".chip"); if (!c) return;
-  var id = c.getAttribute("data-id");
-  if (getippt[id]){ delete getippt[id]; c.classList.remove("on"); } else { getippt[id] = true; c.classList.add("on"); }
-  auswerten();
-});
 document.getElementById("ergebnis").addEventListener("click", function(ev){
-  var m = ev.target.closest(".mehr");
+  var m = ev.target.closest("#erklBtn");
   if (m){
-    var i = document.getElementById("info-" + m.getAttribute("data-f"));
+    var i = document.getElementById("erkl");
     var offen = i.classList.toggle("offen");
-    m.textContent = offen ? "Weniger" : "Mehr erfahren";
+    m.textContent = offen ? "Schliessen" : "Was steckt dahinter?";
     return;
   }
-  var k = ev.target.closest("#kopieren"); if (k) kopieren(k);
 });
 
-baueChips();
 </script>
 </body>
 </html>

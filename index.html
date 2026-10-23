@@ -101,6 +101,18 @@ button{font:inherit;cursor:pointer;border:none;border-radius:10px;padding:11px 1
 .info h6{margin:10px 0 3px;font-size:.85rem;color:var(--dunkel)}
 .info h6:first-child{margin-top:0}
 .info p{margin:0}
+.rechtl{max-width:760px;margin:6px auto 0;padding:0 16px}
+.rechtl details{background:#fff;border-radius:14px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:12px 16px}
+.rechtl summary{cursor:pointer;font-weight:700;color:var(--dunkel);list-style:none}
+.rechtl summary::-webkit-details-marker{display:none}
+.rechtl summary::before{content:"▸ ";color:var(--royal)}
+.rechtl details[open] summary::before{content:"▾ "}
+.rt{font-size:.88rem;color:var(--text);margin-top:6px}
+.rt h4{margin:12px 0 3px;font-size:.9rem;color:var(--dunkel)}
+.rt p{margin:0}
+.rt ul{margin:4px 0 0;padding-left:18px}
+.rt li{margin:2px 0}
+.rt .stand{margin-top:10px;font-size:.78rem;color:var(--grau)}
 footer{max-width:760px;margin:10px auto 0;padding:18px 16px 28px;text-align:center;font-size:.8rem;color:var(--grau)}
 footer .l1{color:var(--dunkel);font-weight:600}
 footer .l3{margin-top:8px;font-size:.75rem}
@@ -135,10 +147,37 @@ footer .l3{margin-top:8px;font-size:.75rem}
   <div id="ergebnis"></div>
 </main>
 
+<section class="rechtl" id="rechtl">
+  <details>
+    <summary>Hinweise &amp; Quellen</summary>
+    <div class="rt">
+      <h4>Was diese App ist</h4>
+      <p>Der Darm-Check ist ein kostenloses Informationsangebot. Er zeigt, wie stark die eingegebenen Beschwerden nach allgemein zugänglicher Literatur mit einer Dünndarm-Fehlbesiedlung (SIBO), versteckten Erregern oder einer durchlässigen Darmschleimhaut (Leaky Gut) in Verbindung gebracht werden.</p>
+      <h4>Was sie nicht ist</h4>
+      <p>Keine Diagnose, keine Behandlungsempfehlung und kein Heilversprechen. Sie ersetzt keine ärztliche oder therapeutische Abklärung. Bei starken, neuen oder anhaltenden Beschwerden gehört eine Abklärung durch eine Fachperson dazu.</p>
+      <h4>Zur Einordnung</h4>
+      <p>SIBO ist ein in der Medizin beschriebenes Krankheitsbild. «Leaky Gut» und «versteckte Erreger» sind Begriffe aus der Naturheilkunde und Komplementärmedizin; die erhöhte Durchlässigkeit der Darmschleimhaut wird erforscht, gilt in der Schulmedizin aber nicht als eigenständige Diagnose. Die Prozentzahlen sind eine Gewichtung der Hinweise, keine gemessene Wahrscheinlichkeit.</p>
+      <h4>Datenschutz</h4>
+      <p>Die Eingaben werden nur auf diesem Gerät ausgewertet. Es wird nichts gespeichert, gesendet oder weitergegeben, und es braucht keine Anmeldung.</p>
+      <h4>Quellen (Auswahl)</h4>
+      <ul>
+        <li>DocCheck Flexikon: Bakterielle Dünndarmfehlbesiedlung</li>
+        <li>Biovis Diagnostik: Patienteninformation SIBO</li>
+        <li>Dr. Michael Ruscio: SIBO und Beschwerden ausserhalb des Darms</li>
+        <li>Rupa Health: Erkrankungen im Zusammenhang mit SIBO</li>
+        <li>InnerBuddies: Leaky-Gut-Syndrom – Symptome und Ursachen</li>
+        <li>PTAheute: Würmer im Darm</li>
+        <li>Allgemeine Naturheilkunde- und Ratgeberliteratur zu Candida, Parasiten und chronischen Infekten</li>
+      </ul>
+      <p class="stand">Stand: Oktober 2026 · ohne Gewähr auf Vollständigkeit</p>
+    </div>
+  </details>
+</section>
+
 <footer>
   <div class="l1">Idee, Konzept &amp; Architektur Markus Rufer</div>
   <div>Technische Umsetzung. Claude by Anthropic</div>
-  <div class="l3">Energetische Einschätzung auf Grund der Beschwerden — keine medizinische Diagnose.</div>
+  <div class="l3">Information auf Grund der Beschwerden — keine medizinische Diagnose, kein Heilversprechen.</div>
 </footer>
 
 <script>

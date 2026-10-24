@@ -651,7 +651,7 @@ function zeigeErgebnis(sc, wi, erreger, anzahl, hits){
       '<p class="kurz">' + esc(fa.kurz) + '</p>';
 
     html += '<div class="warum"><h5>Warum</h5>' + wi[f].map(function(x){
-      return '<div class="wi"><b>' + esc(x.n) + '<span class="pkt">' + ["","schwach","mittel","stark"][x.w] + '</span></b>' +
+      return '<div class="wi"><b>' + esc(x.n) + '</b>' +
              (x.t ? '<span class="tx">' + esc(x.t) + '</span>' : '') + '</div>';
     }).join("") + '</div>';
 

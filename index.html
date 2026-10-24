@@ -88,7 +88,7 @@ button{font:inherit;cursor:pointer;border:none;border-radius:10px;padding:11px 1
 .wi{padding:8px 0;border-bottom:1px solid #f0f3f6}
 .wi:last-child{border-bottom:none}
 .wi b{display:block;font-size:.95rem}
-.wi .pkt{color:var(--c);letter-spacing:1px;font-size:.8rem;margin-left:4px}
+.wi .pkt{color:var(--c);border:1px solid var(--c);border-radius:6px;padding:0 6px;font-size:.7rem;font-weight:600;margin-left:6px;white-space:nowrap;vertical-align:1px}
 .wi span.tx{display:block;font-size:.88rem;color:#4a5560;margin-top:2px}
 .mehr{margin-top:12px;background:var(--hellblau);color:var(--dunkel);width:100%}
 .info{display:none;margin-top:10px;background:#f7fafd;border-radius:10px;padding:12px 14px;font-size:.9rem}
@@ -651,7 +651,7 @@ function zeigeErgebnis(sc, wi, erreger, anzahl, hits){
       '<p class="kurz">' + esc(fa.kurz) + '</p>';
 
     html += '<div class="warum"><h5>Warum</h5>' + wi[f].map(function(x){
-      return '<div class="wi"><b>' + esc(x.n) + '<span class="pkt">' + "●●●".slice(0, x.w) + '</span></b>' +
+      return '<div class="wi"><b>' + esc(x.n) + '<span class="pkt">' + ["","schwach","mittel","stark"][x.w] + '</span></b>' +
              (x.t ? '<span class="tx">' + esc(x.t) + '</span>' : '') + '</div>';
     }).join("") + '</div>';
 

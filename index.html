@@ -120,6 +120,9 @@ footer .l2{margin:16px 0 6px}
 footer .l2 a{display:inline-block;padding:12px 22px;border-radius:12px;background:linear-gradient(135deg,#3f63dd 0%,#182f83 100%);color:#fff;font-weight:600;font-size:.92rem;text-decoration:none;box-shadow:0 3px 10px rgba(24,47,131,.25)}
 footer .l2 a:active{transform:scale(.97)}
 #ergebnis:empty{display:none}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.chip{background:#f4f7fa;color:var(--dunkel);border:1.5px solid var(--linie);border-radius:20px;padding:8px 12px;font-size:.88rem;font-weight:600}
+.chip.an{background:var(--royal);color:#fff;border-color:var(--royal)}
 </style>
 </head>
 <body>
@@ -140,6 +143,13 @@ footer .l2 a:active{transform:scale(.97)}
       <button class="b-sec" id="neu">Neu</button>
     </div>
     <div class="hint">Mehrere Beschwerden mit Komma trennen. Die Auswertung läuft beim Tippen mit.</div>
+  </section>
+
+  <section class="box" id="tippBox">
+    <label class="t">Schon gemacht oder vorhanden?</label>
+    <div class="hint" style="margin-top:0">Antippen, was zutrifft — auch wenn es keine Beschwerden macht.</div>
+    <div class="hs">Zähne</div><div class="chips" data-g="z"></div>
+    <div class="hs">Vorgeschichte</div><div class="chips" data-g="v"></div>
   </section>
 
   <section class="box" id="erkanntBox" style="display:none">
@@ -380,8 +390,14 @@ var S = [
   y:{s:"Nährstoffmangel und Gärgifte.",p:"Viren am Gleichgewichtsnerv (z. B. Herpes) und Borrelien.",l:"Stille Entzündung."}},
  {id:"zittern",g:"n",n:"Zittern",k:["zitter","tremor"],w:[1,1,1],
   y:{s:"B12- und Magnesiummangel.",p:"Erreger mit Vorliebe für Nerven und Pilzgifte.",l:"Entzündung im Nervensystem über die Darm-Hirn-Achse."}},
- {id:"zahn",g:"i",n:"Wurzelbehandelte Zähne / Zahnherd",k:["wurzelbehandel","wurzelbehandl","toter zahn","tote zaehne","zahnherd","kieferentzuend","kieferostitis","nico","fistel","parodont","implantat","zahnfleischentzuend","zahnfleischbluten","zahnfleisch blutet","zahnfleischrueckgang"],w:[0,3,0],
-  y:{p:"Tote, wurzelbehandelte Zähne und Kieferherde sind klassische Störfelder — Keime streuen von dort still in den ganzen Körper."},e:["zahn"]},
+ {id:"wurzel",g:"i",n:"Wurzelbehandelter Zahn / toter Zahn",k:["wurzelbehandel","wurzelbehandl","wurzelkanal","wurzelfuell","wurzelspitz","toter zahn","tote zaehne","toten zahn","devital"],w:[0,3,1],
+  y:{p:"Ein wurzelbehandelter Zahn ist tot: In seinen feinen Kanälchen überleben Keime ohne Blutversorgung, wo die Abwehr nicht hinkommt. Von dort streuen Keime und ihre Gifte still in den ganzen Körper — oft ohne Schmerz und ohne Befund im Röntgen.",l:"Die Gifte aus dem toten Zahn werden geschluckt und belasten die Darmschleimhaut."},e:["zahn"]},
+ {id:"zahnimpl",g:"i",n:"Zahnimplantat",k:["zahnimplantat","zahn implantat","implantat im kiefer","implantat im mund","implantat am zahn","implantate im kiefer","titanimplantat","keramikimplantat","periimplantitis"],w:[0,2,1],
+  y:{p:"Am Übergang zwischen Implantat und Zahnfleisch können sich Keime in Biofilmen festsetzen (Periimplantitis) — oft ohne Schmerz. Auch der Kieferknochen um das Implantat kann ein stiller Herd sein.",l:"Abrieb von Titan kann das Abwehrsystem dauerhaft reizen."},e:["zahn"]},
+ {id:"zahn",g:"i",n:"Kieferherd / Weisheitszähne / Zahnfleisch",k:["weisheitsz","zahn gezogen","zaehne gezogen","zahn ziehen","zahnextrakt","zahnherd","kieferherd","kieferentzuend","kieferostitis","=nico","fistel","parodont","zahnfleischentzuend","zahnfleischbluten","zahnfleisch blutet","zahnfleischrueckgang","zahnfleischtasche"],w:[0,3,0],
+  y:{p:"Wo Zähne gezogen wurden (besonders Weisheitszähne), heilt der Knochen manchmal nur oberflächlich zu — darunter kann ein stiller Kieferherd bleiben. Entzündetes Zahnfleisch ist ein offenes Tor für Keime ins Blut."},e:["zahn"]},
+ {id:"implant",g:"o",n:"Anderes Implantat / Prothese / Fremdkörper",k:["implantat","hueftprothese","knieprothese","schulterprothese","prothese","kuenstliches gelenk","kunstgelenk","neue huefte","neues knie","brustimplantat","silikon","schrauben im","metallplatte","osteosynthese","marknagel","stent","herzklappe","schrittmacher","spirale"],x:["zahn","kiefer","zaehne","gebiss"],w:[1,2,2],
+  y:{s:"Grosse Operationen mit Narkose, Antibiotika und Schmerzmitteln bremsen die Putzwelle des Dünndarms.",p:"Auf fremden Oberflächen im Körper (Metall, Kunststoff, Silikon) bilden Keime gern Biofilme, an die die Abwehr schlecht herankommt.",l:"Ein Fremdkörper hält das Abwehrsystem dauernd in Bereitschaft; Metallabrieb kann die stille Entzündung verstärken."}},
  {id:"sinus",g:"i",n:"Chronische Nebenhöhlen",k:["nebenhoehle","sinusitis","chronischer schnupfen","nase immer zu","nase verstopft","verstopfte nase","dauerschnupfen"],w:[0,2,1],
   y:{p:"Chronische Nebenhöhlen sind ein häufiges Versteck für Bakterien und Pilze in Biofilmen.",l:"Allergische Bereitschaft aus dem Darm hält die Schleimhäute geschwollen."}},
  {id:"schimmel",g:"i",n:"Schimmel in der Wohnung",k:["schimmel","feuchte wohnung","feuchte wand","feuchter keller","wasserschaden"],w:[0,3,1],
@@ -423,7 +439,7 @@ var S = [
   y:{s:"Calcium, Vitamin D und K2 werden bei Fehlbesiedlung schlecht aufgenommen.",l:"Stille Entzündung aktiviert die knochenabbauenden Zellen; die Aufnahme ist gestört."}},
  {id:"gicht",g:"b",n:"Gicht / Harnsäure",k:["gicht","harnsaeure","podagra"],w:[1,0,2],
   y:{s:"Ein gestörter Darm scheidet weniger Harnsäure aus — normal übernimmt er rund ein Drittel davon.",l:"Stille Entzündung und eine belastete Leber erhöhen die Harnsäure."}},
- {id:"kiefer",g:"b",n:"Zähneknirschen / Kiefer",k:["knirsch","zaehne knirschen","kieferpressen","pressen nachts","cmd","kiefergelenk","kiefer"],w:[0,2,0],
+ {id:"kiefer",g:"b",n:"Zähneknirschen / Kiefer",k:["knirsch","zaehne knirschen","kieferpressen","pressen nachts","cmd","kiefergelenk","kieferschmerz","kiefer tut weh","kieferknack","kiefer knackt","kieferverspann"],w:[0,2,0],
   y:{p:"Zähneknirschen in der Nacht gilt in der Naturheilkunde als klassisches Wurmzeichen; der Kiefer selbst ist oft ein Störfeld."},e:["para","zahn"]},
 
  /* --- Nerven & Sinne --- */
@@ -678,6 +694,8 @@ function hinweise(f, H){
       P.push("<b>Putzwelle:</b> Die Selbstreinigung des Dünndarms (MMC) ist wahrscheinlich gestört — darum kommt SIBO bei solchen Auslösern gern wieder.");
     if (H.ppi) P.push("<b>Säureblocker:</b> Ohne Magensäure fehlt die erste Keimsperre — die Tür für Keime steht offen.");
   }
+  if (f === "p" && (H.wurzel || H.zahnimpl || H.zahn))
+    P.push("<b>Zähne:</b> Tote Zähne, Implantate und Kieferherde machen selten Zahnschmerzen — ihre Wirkung zeigt sich anderswo im Körper.");
   if (f === "p" && (H.pilz || H.heisshunger || H.zunge || H.antibio))
     P.push("<b>Candida:</b> Hefepilze leben von Zucker und wachsen gern zusammen mit SIBO.");
   if (f === "l" && (H.schmerzmittel || H.alkohol || H.gluten))
@@ -699,7 +717,23 @@ var ERKLAERUNG = '<div class="erkl">' +
  '</div>';
 
 
-/* ---------- Zeichen zum Antippen ---------- */
+/* ---------- Zum Antippen (bewusst kurz) ---------- */
+var TIPP = {
+  z:[["wurzel","Wurzelbehandlung"],["zahnimpl","Zahnimplantat"],["zahn","Weisheitszähne gezogen / Kieferherd"],["amalgam","Amalgam (heute oder früher)"]],
+  v:[["implant","Anderes Implantat / Prothese"],["antibio","Antibiotika"],["ppi","Säureblocker"],["op","Bauch-OP / Gallenblase raus"],["ebv","Pfeiffer"],["zecke","Zeckenstich"]]
+};
+Object.keys(TIPP).forEach(function(g){
+  document.querySelector('.chips[data-g="' + g + '"]').innerHTML = TIPP[g].map(function(t){
+    return '<button type="button" class="chip" data-id="' + t[0] + '">' + esc(t[1]) + '</button>';
+  }).join("");
+});
+document.getElementById("tippBox").addEventListener("click", function(ev){
+  var b = ev.target.closest(".chip"); if (!b) return;
+  var id = b.getAttribute("data-id");
+  if (getippt[id]) delete getippt[id]; else getippt[id] = true;
+  b.classList.toggle("an", !!getippt[id]);
+  auswerten();
+});
 
 
 /* ---------- Ereignisse ---------- */
@@ -714,6 +748,7 @@ document.getElementById("los").addEventListener("click", function(){
 });
 document.getElementById("neu").addEventListener("click", function(){
   document.getElementById("eingabe").value = ""; getippt = {};
+  Array.prototype.forEach.call(document.querySelectorAll(".chip.an"), function(b){ b.classList.remove("an"); });
   
   auswerten(); document.getElementById("eingabe").focus();
 });
